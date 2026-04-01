@@ -1281,3 +1281,473 @@
 #10 C:\\Users\\SAMUEL\\Documents\\desarrollos\\Codigos-Postales-Api\\CodigosPostalesApi\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #11 {main}
 "} 
+[2026-03-10 11:25:03] local.ERROR: The "--mc" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--mc\" option does not exist. at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Input/ArgvInput.php:223)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Input/ArgvInput.php(152): Symfony/Component/Console/Input/ArgvInput->addLongOption('mc', NULL)
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Input/ArgvInput.php(85): Symfony/Component/Console/Input/ArgvInput->parseLongOption('--mc')
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Input/ArgvInput.php(74): Symfony/Component/Console/Input/ArgvInput->parseToken('--mc', true)
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Input/Input.php(56): Symfony/Component/Console/Input/ArgvInput->parse()
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(285): Symfony/Component/Console/Input/Input->bind(Object(Symfony/Component/Console/Input/InputDefinition))
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Foundation/Console/ModelMakeCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#11 {main}
+"} 
+[2026-04-01 09:53:42] local.ERROR: SQLSTATE[HY000]: General error: 1824 Failed to open the referenced table 'employees' (Connection: mysql, SQL: alter table `users` add constraint `users_employee_id_foreign` foreign key (`employee_id`) references `employees` (`id`) on delete set null) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1824 Failed to open the referenced table 'employees' (Connection: mysql, SQL: alter table `users` add constraint `users_employee_id_foreign` foreign key (`employee_id`) references `employees` (`id`) on delete set null) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('alter table `us...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(110): Illuminate/Database/Connection->statement('alter table `us...')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(602): Illuminate/Database/Schema/Blueprint->build(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Schema/Grammars/MySqlGrammar))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(456): Illuminate/Database/Schema/Builder->build(Object(Illuminate/Database/Schema/Blueprint))
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/Schema/Builder->create('users', Object(Closure))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2014_10_12_000000_create_users_table.php(14): Illuminate/Support/Facades/Facade::__callStatic('create', Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2014_10_12_0000...', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2014_10_12_0000...', Object(Closure))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/MigrateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#32 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1824 Failed to open the referenced table 'employees' at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:587)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(587): PDOStatement->execute()
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::statement():576}('alter table `us...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('alter table `us...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(110): Illuminate/Database/Connection->statement('alter table `us...')
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(602): Illuminate/Database/Schema/Blueprint->build(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Schema/Grammars/MySqlGrammar))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(456): Illuminate/Database/Schema/Builder->build(Object(Illuminate/Database/Schema/Blueprint))
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/Schema/Builder->create('users', Object(Closure))
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2014_10_12_000000_create_users_table.php(14): Illuminate/Support/Facades/Facade::__callStatic('create', Array)
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2014_10_12_0000...', Object(Closure))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2014_10_12_0000...', Object(Closure))
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/MigrateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#34 {main}
+"} 
+[2026-04-01 15:52:47] local.ERROR: PDO::prepare(): Argument #1 ($query) must not be empty {"exception":"[object] (ValueError(code: 0): PDO::prepare(): Argument #1 ($query) must not be empty at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:581)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(581): PDO->prepare('')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::statement():576}(NULL, Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback(NULL, Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run(NULL, Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement(NULL)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_122417_vw_general.php(15): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_1224...', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_1224...', Object(Closure))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/MigrateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#32 {main}
+"} 
+[2026-04-01 15:53:20] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.av' at line 12 (Connection: mysql, SQL: 
+            CREATE VIEW vw_employees AS
+            SELECT
+                e.id AS employee_id,
+                e.employee_code,
+                e.hire_date,
+                e.active AS employee_active,
+                ed.name,
+                ed.plast_name,
+                ed.mlast_name,
+                CONCAT(ed.name,' ',IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,'')) as full_name, 
+                CONCAT(IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,''), ' ', ed.name) as full_name_reverse
+                ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.avatar,
+                ed.signature_image,
+                ea.position_uuid,
+                p.name AS position_name,
+                d.uuid AS department_uuid,
+                d.name AS department_name,
+                o.id AS organization_id,
+                o.name AS organization_name,
+                a.id AS administration_id,
+                a.name AS administration_name,
+                a.president_name,
+                a.logo AS administration_logo,
+                u.id AS user_id,
+                u.username,
+                u.email
+            FROM employees e
+            LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
+            LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
+            LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN administrations a ON a.end_date IS NULL
+            LEFT JOIN users u ON e.id = u.employee_id
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.av' at line 12 (Connection: mysql, SQL: 
+            CREATE VIEW vw_employees AS
+            SELECT
+                e.id AS employee_id,
+                e.employee_code,
+                e.hire_date,
+                e.active AS employee_active,
+                ed.name,
+                ed.plast_name,
+                ed.mlast_name,
+                CONCAT(ed.name,' ',IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,'')) as full_name, 
+                CONCAT(IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,''), ' ', ed.name) as full_name_reverse
+                ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.avatar,
+                ed.signature_image,
+                ea.position_uuid,
+                p.name AS position_name,
+                d.uuid AS department_uuid,
+                d.name AS department_name,
+                o.id AS organization_id,
+                o.name AS organization_name,
+                a.id AS administration_id,
+                a.name AS administration_name,
+                a.president_name,
+                a.logo AS administration_logo,
+                u.id AS user_id,
+                u.username,
+                u.email
+            FROM employees e
+            LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
+            LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
+            LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN administrations a ON a.end_date IS NULL
+            LEFT JOIN users u ON e.id = u.employee_id
+        ) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_employees_view.php(11): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(61): Illuminate/Console/Command->call('migrate', Array)
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/RefreshCommand->handle()
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/RefreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 {main}
+
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.av' at line 12 at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:581)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(581): PDO->prepare('/n            CR...')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::statement():576}('/n            CR...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_employees_view.php(11): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(61): Illuminate/Console/Command->call('migrate', Array)
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/RefreshCommand->handle()
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/RefreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#43 {main}
+"} 
+[2026-04-01 15:55:31] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_gpcentral.administrations' doesn't exist (Connection: mysql, SQL: 
+            CREATE VIEW vw_employees AS
+            SELECT
+                e.id AS employee_id,
+                e.employee_code,
+                e.hire_date,
+                e.active AS employee_active,
+                ed.name,
+                ed.plast_name,
+                ed.mlast_name,
+                CONCAT(ed.name,' ',IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,'')) as full_name, 
+                CONCAT(IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,''), ' ', ed.name) as full_name_reverse,
+                ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.avatar,
+                ed.signature_image,
+                ea.position_uuid,
+                p.name AS position_name,
+                d.uuid AS department_uuid,
+                d.name AS department_name,
+                o.id AS organization_id,
+                o.name AS organization_name,
+                a.id AS administration_id,
+                a.name AS administration_name,
+                a.president_name,
+                a.logo AS administration_logo,
+                u.id AS user_id,
+                u.username,
+                u.email
+            FROM employees e
+            LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
+            LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
+            LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN administrations a ON a.end_date IS NULL
+            LEFT JOIN users u ON e.id = u.employee_id
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_gpcentral.administrations' doesn't exist (Connection: mysql, SQL: 
+            CREATE VIEW vw_employees AS
+            SELECT
+                e.id AS employee_id,
+                e.employee_code,
+                e.hire_date,
+                e.active AS employee_active,
+                ed.name,
+                ed.plast_name,
+                ed.mlast_name,
+                CONCAT(ed.name,' ',IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,'')) as full_name, 
+                CONCAT(IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,''), ' ', ed.name) as full_name_reverse,
+                ed.rfc,
+                ed.curp,
+                ed.phone,
+                ed.avatar,
+                ed.signature_image,
+                ea.position_uuid,
+                p.name AS position_name,
+                d.uuid AS department_uuid,
+                d.name AS department_name,
+                o.id AS organization_id,
+                o.name AS organization_name,
+                a.id AS administration_id,
+                a.name AS administration_name,
+                a.president_name,
+                a.logo AS administration_logo,
+                u.id AS user_id,
+                u.username,
+                u.email
+            FROM employees e
+            LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
+            LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
+            LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN administrations a ON a.end_date IS NULL
+            LEFT JOIN users u ON e.id = u.employee_id
+        ) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_employees_view.php(11): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(61): Illuminate/Console/Command->call('migrate', Array)
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/RefreshCommand->handle()
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/RefreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 {main}
+
+[previous exception] [object] (PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_gpcentral.administrations' doesn't exist at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:581)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(581): PDO->prepare('/n            CR...')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::statement():576}('/n            CR...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_employees_view.php(11): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(61): Illuminate/Console/Command->call('migrate', Array)
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/RefreshCommand->handle()
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/RefreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#43 {main}
+"} 
