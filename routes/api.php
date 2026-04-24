@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\AdministrationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CodigoPostalController;
@@ -61,11 +62,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::post('/changePasswordAuth', [AuthController::class, 'changePasswordAuth']);
 
-    // Route::prefix("logs")->group(function () {
-    //     Route::post("/", [ActivityLogController::class, 'index']);
-    //     Route::get("/dashboard", [ActivityLogController::class, 'dashboard']);
-    //     Route::get("/export", [ActivityLogController::class, 'export']);
-    // });
+    Route::prefix("logs")->group(function () {
+        Route::post("/", [ActivityLogController::class, 'index']);
+        Route::get("/dashboard", [ActivityLogController::class, 'dashboard']);
+        Route::get("/export", [ActivityLogController::class, 'export']);
+    });
 
     // Route::prefix("menus")->group(function () {
     //     Route::get("/", [MenuController::class, 'index']);
