@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->index();                    // identificador lógico del departamento
             $table->foreignId('organization_id')->constrained();
+            $table->string('code', 45)->nullable()->unique();
             $table->string('name', 255);
             $table->string('seal_image')->nullable();         // sello
             $table->date('start_date');

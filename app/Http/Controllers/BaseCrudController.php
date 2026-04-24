@@ -156,9 +156,11 @@ abstract class BaseCrudController extends Controller
    /**
     * Crear o actualizar registro.
     */
-   public function createOrUpdate(Request $request, $id = null)
+   public function createOrUpdate(Request $request)
    {
       try {
+         $id = $request->id ?? null;
+
          // Validar
          $validator = $this->validateRequest($request, $id);
          if ($validator->fails()) {
