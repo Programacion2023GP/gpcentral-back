@@ -86,6 +86,7 @@ abstract class BaseCrudController extends Controller
     */
    public function index(Request $request): JsonResponse
    {
+      Log::info("messageAQUI EN LA INDEX");
       try {
          $query = $this->modelClass::query();
 
@@ -131,12 +132,14 @@ abstract class BaseCrudController extends Controller
       try {
          $query = $this->modelClass::where('active', true);
 
+
          if (is_array($this->selectLabel)) {
             $labelField = DB::raw($this->selectLabel[0]);
          } else {
             $labelField = $this->selectLabel;
          }
-
+         Log::info("holissss");
+         Log::info($this->selectLabel);
          $query->select('id as id', DB::raw("{$labelField} as label"));
 
          if ($this->selectIndexQueryCallback) {
@@ -200,7 +203,7 @@ abstract class BaseCrudController extends Controller
    /**
     * Mostrar un registro.
     */
-   public function show(Request $request, $id, $internal = false)
+   public function show($id, Request $request, $internal = false)
    {
       try {
          $model = $this->modelClass::find($id);

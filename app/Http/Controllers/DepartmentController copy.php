@@ -3,13 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Department;
-use App\Models\ObjResponse;
 use App\Models\VW_User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 
 class DepartmentController extends BaseCrudController
 {
@@ -18,24 +16,24 @@ class DepartmentController extends BaseCrudController
     protected $imageFields = ['seal_image'];
     protected $defaultOrderBy = ['id' => 'desc'];
     protected $useAuthFilter = true;
-    protected $selectLabel = 'CONCAT(COALESCE(code, "")," - ",name)';
+    protected $selectLabel = ['CONCAT(COALESCE(letters, "")," - ",department)'];
 
     public function __construct()
     {
         $this->validationRules = [
-            'code'   => 'string|max:255',
-            'name' => 'string|max:255',
+            'letters'   => 'string|max:255',
+            'department' => 'string|max:255',
         ];
 
-        // $this->selectIndexQueryCallback = function ($query, Request $request) {
-        //     $auth = Auth::user();
-        //     if ($auth && $auth->role_id > 3) {
-        //         $userEmployee = VW_User::where('id', $auth->id)->first();
-        //         if ($userEmployee && !Str::contains($userEmployee->more_permissions ?? '', ['Ver Todas las Situaciones', 'todas'])) {
-        //             $query->where('id', $userEmployee->department_id);
-        //         }
-        //     }
-        // };
+        $this->selectIndexQueryCallback = function ($query, Request $request) {
+            $auth = Auth::user();
+            if ($auth && $auth->role_id > 3) {
+                $userEmployee = VW_User::where('id', $auth->id)->first();
+                if ($userEmployee && !Str::contains($userEmployee->more_permissions ?? '', ['Ver Todas las Situaciones', 'todas'])) {
+                    $query->where('id', $userEmployee->department_id);
+                }
+            }
+        };
     }
 
     /**
@@ -107,7 +105,6 @@ class DepartmentController extends BaseCrudController
      */
     public function show($id, Request $request,  $internal = false)
     {
-        Log::info("Porque entre aqui al show?");
         try {
             $date = $request->get('date', now()->toDateString());
             $department = Department::where('id', $id)
@@ -126,5 +123,90 @@ class DepartmentController extends BaseCrudController
             Log::error("DepartmentController ~ show: " . $ex->getMessage());
             return ObjResponse::serverError('Error al obtener departamento', $ex);
         }
+    }
+}
+
+
+
+/*
+namespace App\Http\Controllers;
+
+use App\Models\Department;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
+class DepartmentController extends Controller
+{
+    public function index(Request $request)
+    {
+        $date = $request->get('date', now()->toDateString());
+        $departments = Department::with('organization')
+            ->activeAt($date)
+            ->paginate();
+
+        return DepartmentResource::collection($departments);
+    }
+
+    public function show($uuid, Request $request)
+    {
+        $date = $request->get('date', now()->toDateString());
+        $department = Department::where('uuid', $uuid)
+            ->activeAt($date)
+            ->firstOrFail();
+
+        return new DepartmentResource($department);
+    }
+
+    public function store(StoreDepartmentRequest $request)
+    {
+        DB::transaction(function () use ($request) {
+            $data = $request->validated();
+            $data['uuid'] = (string) Str::uuid();
+            $data['start_date'] = $request->get('start_date', now()->toDateString());
+            $data['active'] = true;
+            $department = Department::create($data);
+            return new DepartmentResource($department);
+        });
+    }
+
+    public function update(StoreDepartmentRequest $request, $uuid)
+    {
+        $date = $request->get('effective_date', now()->toDateString());
+
+        DB::transaction(function () use ($request, $uuid, $date) {
+            // Cerrar versión actual
+            $current = Department::where('uuid', $uuid)->whereNull('end_date')->first();
+            if ($current) {
+                $current->end_date = $date;
+                $current->active = false;
+                $current->save();
+            }
+
+            // Crear nueva versión
+            $data = $request->validated();
+            $data['uuid'] = $uuid;
+            $data['start_date'] = $date;
+            $data['active'] = true;
+            $new = Department::create($data);
+
+            return new DepartmentResource($new);
+        });
+    }
+
+    public function destroy($uuid)
+    {
+        // Soft delete: marcar todas las versiones con deleted_at y cerrar la actual
+        DB::transaction(function () use ($uuid) {
+            $current = Department::where('uuid', $uuid)->whereNull('end_date')->first();
+            if ($current) {
+                $current->end_date = now()->toDateString();
+                $current->active = false;
+                $current->save();
+            }
+            Department::where('uuid', $uuid)->delete(); // soft delete todas las versiones
+        });
+
+        return response()->noContent();
     }
 }

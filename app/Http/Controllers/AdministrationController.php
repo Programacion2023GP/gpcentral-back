@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Administration;
+use App\Models\Department;
+use App\Models\ObjResponse;
+use Illuminate\Http\Request;
 
 class AdministrationController extends BaseCrudController
 {
@@ -105,7 +108,7 @@ class AdministrationController extends BaseCrudController
     /**
      * Mostrar versión activa en una fecha.
      */
-    public function show($id, Request $request)
+    public function show($id, Request $request,  $internal = false)
     {
         try {
             $date = $request->get('date', now()->toDateString());
