@@ -417,3 +417,422 @@
 [2026-04-30 14:37:28] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110007  
 [2026-04-30 14:37:28] local.INFO: Empleados importados correctamente.  
 [2026-04-30 14:43:36] local.INFO: Usuarios creados: 1977  
+[2026-04-30 14:49:17] local.INFO: Puestos insertados: 105  
+[2026-04-30 14:49:23] local.WARNING: Puesto no encontrado: AUXILIAR ADMINISTRATIVO para empleado 611491  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100445  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107694  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109957  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109975  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110019  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110031  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209988  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 200211  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 200930  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 202723  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 202992  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 204547  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 207156  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 207483  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 209620  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210028  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210106  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 103810  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 200031  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 204384  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 206860  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 109913  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 109931  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200175  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200212  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200910  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 201183  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 202515  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 202524  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 202725  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 203208  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 204111  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 205737  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 206505  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 207407  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 207598  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 207767  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208091  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 208398  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208602  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208728  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 208751  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209580  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209603  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209992  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209999  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210007  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210023  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 210024  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210038  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210041  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210066  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210154  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210156  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210164  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210173  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109952  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109592  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210121  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 108374  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109966  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110039  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 207773  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106621  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109978  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109989  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110000  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202103  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210145  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104213  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109921  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109970  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210013  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210136  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N COORDINADORA para empleado 109388  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110003  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106335  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109936  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109919  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109933  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109942  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109968  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210068  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210080  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109935  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109941  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109986  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109990  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 103858  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110049  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109930  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109937  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109987  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109991  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 100078  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100668  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 101205  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 101210  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 102718  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104202  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105424  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA TECNICO DE ILUMINACION A para empleado 106214  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 108457  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 108744  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 108947  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109902  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109924  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109928  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 109944  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109946  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109953  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 109977  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109979  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109985  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109988  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: N COORDINADORA para empleado 110004  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 110014  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 110026  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 200720  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 201211  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 203703  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 205388  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 206098  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207797  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209569  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 209619  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209765  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 210040  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210043  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 210048  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210062  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210075  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210107  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210108  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210140  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210157  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102880  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109984  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 205318  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210144  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 107609  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109793  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109981  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110027  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202019  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 102262  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 105227  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108870  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109916  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109993  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 109997  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110037  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110044  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 201209  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 205502  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 205707  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205988  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206495  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 206706  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207222  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207423  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207468  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207667  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209342  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209584  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209618  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 209998  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210009  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210015  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210051  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 210052  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210074  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210088  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210094  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210120  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210128  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210132  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210153  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210171  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106924  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109901  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102772  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110038  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 205803  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 208313  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209996  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210067  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210096  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100325  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102056  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202751  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202800  
+[2026-04-30 14:49:25] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202930  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 208571  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209602  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209985  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210046  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210103  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210133  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210134  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210174  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109974  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109982  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107649  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109969  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110009  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110010  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110018  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110020  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110023  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209760  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210089  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210168  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210047  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210177  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 105308  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 107692  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 109994  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200598  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200632  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200971  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 201214  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202538  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202612  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202636  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202815  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202867  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203149  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203676  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 203696  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203701  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204332  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205552  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205582  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206330  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206633  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206795  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206941  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206967  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207006  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207056  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207260  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207416  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207419  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207424  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207433  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207531  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207614  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207691  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207771  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207776  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 208391  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209046  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210001  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210003  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210037  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 210039  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210063  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210064  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210071  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210073  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210076  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210077  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210097  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210109  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210123  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210129  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210138  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210141  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210146  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210152  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210166  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104394  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109954  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102694  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110015  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110030  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 101178  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 208952  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210045  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 108368  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107288  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109965  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 207976  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109794  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 200686  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 206754  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102516  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 105790  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA ENFERMERA A para empleado 107285  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109593  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 109795  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 109950  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109995  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109996  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 110011  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202437  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 209982  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210122  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108838  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109912  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109920  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109938  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109940  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 207911  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210118  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210137  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 100128  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100768  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105710  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108167  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108378  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109637  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109904  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109958  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109961  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109967  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110008  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110028  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110035  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 206807  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 208823  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210175  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210183  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 107298  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109998  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110033  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200007  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 200106  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202870  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202886  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202894  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203041  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206490  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206497  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 206759  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207029  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207530  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 208878  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210081  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210082  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210111  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210126  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210170  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 210176  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 102190  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 102729  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 102841  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 106067  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 106385  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 106855  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 107709  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 108426  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 108599  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 109566  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109927  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109949  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109955  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 200125  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 202297  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 202968  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203202  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203702  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203837  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205298  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205697  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205727  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 206300  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 206301  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 206940  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207012  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207053  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207409  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207741  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208822  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208858  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208865  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209338  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209500  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209649  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 210027  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 210147  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209991  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 105887  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204380  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 209568  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210148  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 104172  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 109754  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204288  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 206943  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102713  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105224  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106574  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107005  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107286  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: N PROGRAMADOR para empleado 107513  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 108331  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109804  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109915  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109918  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109934  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109939  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109945  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109948  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109973  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110001  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110024  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110029  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110046  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 208039  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209997  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210101  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109983  
+[2026-04-30 14:49:26] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110007  
+[2026-04-30 14:49:26] local.INFO: Empleados importados correctamente.  
+[2026-04-30 14:55:33] local.INFO: Usuarios creados: 1977  
