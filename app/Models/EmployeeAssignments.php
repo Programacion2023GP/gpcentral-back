@@ -13,6 +13,7 @@ class EmployeeAssignments extends Model
 
     protected $fillable = [
         'employee_id',
+        'department_uuid',
         'position_uuid',
         'start_date',
         'end_date',
@@ -28,6 +29,16 @@ class EmployeeAssignments extends Model
     public function employee()
     {
         return $this->belongsTo(Employee::class);
+    }
+
+    // Relación con departamento
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'department_uuid', 'uuid')
+            ->where('start_date', '<=', $this->start_date)
+            ->where(function ($q) {
+                $q->whereNull('end_date')->orWhere('end_date', '>', $this->start_date);
+            });
     }
 
     // Relación con el puesto (versión adecuada según la fecha de la asignación)

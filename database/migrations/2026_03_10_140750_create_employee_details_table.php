@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('mlast_name')->nullable();
             $table->string('rfc', 20)->nullable();
             $table->string('curp', 20)->nullable();
+            $table->enum('gender', ['M','F'])->nullable();
            
             $table->string('phone', 50)->nullable();
             $table->string('signature_image')->nullable();

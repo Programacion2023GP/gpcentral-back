@@ -2,19 +2,53 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class PositionSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
+        // $csvFile = database_path('seeders/data/Nominas.csv');
+        // if (!file_exists($csvFile)) {
+        //     $this->error("Archivo no encontrado: $csvFile");
+        //     return;
+        // }
 
+        // // Obtener departamentos con su uuid (indexados por nombre)
+        // $departments = DB::table('departments')
+        //     ->select('name', 'uuid')
+        //     ->get()
+        //     ->keyBy('name');
+
+        // Mapa: nombre_puesto => department_uuid (primer departamento donde aparece)
+        $positionDeptMap = [];
+
+        // $handle = fopen($csvFile, 'r');
+        // $header = fgetcsv($handle);
+
+        // while (($row = fgetcsv($handle)) !== false) {
+        //     $data = array_combine($header, $row);
+        //     $deptName = trim($data['Departamento']);
+        //     $positionName = trim($data['Puesto']);
+
+        //     if (empty($deptName) || empty($positionName)) {
+        //         continue;
+        //     }
+
+        //     // Si aún no tenemos un departamento para este puesto, lo asignamos
+        //     if (!isset($positionDeptMap[$positionName])) {
+        //         $dept = $departments->get($deptName);
+        //         if ($dept) {
+        //             $positionDeptMap[$positionName] = $dept->uuid;
+        //         }
+        //     }
+        // }
+        // fclose($handle);
+
+        // Lista estática de puestos (ahora con department_uuid opcional)
         $positions = [
             ['name' => 'N ACTUARIO'],
             ['name' => 'NA ADMINISTRADOR A'],
@@ -120,28 +154,30 @@ class PositionSeeder extends Seeder
             ['name' => 'N TRABAJADORA SOCIAL'],
             ['name' => 'N VELADOR'],
             ['name' => 'N VIGILANTE'],
-
-            // Extras que venían al final
             ['name' => 'INSTITUTO MUNICIPAL DE CULTURA'],
-            // ['name' => 'XNB ASISTENTE B'],
-            // ['name' => 'NB SUPERVISO'],
-            // ['name' => 'N PRESIDENTE DE LA JUNTA DE LA VILLA DE'],
         ];
 
-        $data = array_map(function ($position) {
-            return [
-                'uuid' => Str::uuid(),
-                'department_uuid' => null,
-                'name' => $position['name'],
+        // Construir los datos a insertar, añadiendo el department_uuid según el mapa
+        $now = now();
+        $insertData = [];
+        foreach ($positions as $position) {
+            $positionName = $position['name'];
+            $insertData[] = [
+                'uuid' => (string) Str::uuid(),
+                'department_uuid' => $positionDeptMap[$positionName] ?? null,
+                'name' => $positionName,
                 'parent_position_uuid' => null,
-                'start_date' => now(),
+                'start_date' => $now,
                 'end_date' => null,
                 'active' => true,
-                'created_at' => now(),
-                'updated_at' => now(),
+                'created_at' => $now,
+                'updated_at' => $now,
             ];
-        }, $positions);
+        }
 
-        DB::table('positions')->insert($data);
+        // Insertar en la tabla positions
+        DB::table('positions')->insert($insertData);
+
+        Log::info('Puestos insertados: ' . count($insertData));
     }
 }

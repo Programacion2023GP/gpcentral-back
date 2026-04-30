@@ -12,6 +12,7 @@ class EmployeeAssignmentController extends BaseCrudController
     {
         $this->validationRules = [
             'employee_id' => 'required|exists:employees,id',
+            'department_uuid' => 'nullable|exists:departments,uuid',
             'position_uuid' => 'required|exists:positions,uuid',
             'start_date' => 'required|date',
         ];
