@@ -7,8 +7,8 @@ use App\Models\CodigoPostal;
 use App\Models\Community;
 use App\Models\Department;
 use App\Models\Employee;
-use App\Models\EmployeeAssignments;
-use App\Models\EmployeeDetails;
+use App\Models\EmployeeAssignment;
+use App\Models\EmployeeDetail;
 use App\Models\Estados;
 use App\Models\Municipality;
 use App\Models\Organization;
@@ -42,8 +42,8 @@ class AppServiceProvider extends ServiceProvider
         Community::class,
         Department::class,
         Employee::class,
-        EmployeeAssignments::class,
-        EmployeeDetails::class,
+        EmployeeAssignment::class,
+        EmployeeDetail::class,
         Estados::class,
         Municipality::class,
         Organization::class,

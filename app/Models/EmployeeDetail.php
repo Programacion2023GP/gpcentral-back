@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class EmployeeDetails extends Model
+class EmployeeDetail extends Model
 {
     use HasFactory, Notifiable, Auditable;
 
