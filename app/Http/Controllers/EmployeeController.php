@@ -5,8 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Employee;
 use App\Models\EmployeeDetail;
 use App\Models\EmployeeAssignment;
+use App\Models\ObjResponse;
 use App\Models\User;
+use App\Models\VW_Employee;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -27,6 +32,35 @@ class EmployeeController extends BaseCrudController
         $this->indexQueryCallback = function ($query, Request $request) {
             $query->with(['currentDetail', 'currentAssignment.position.department.organization']);
         };
+    }
+
+    /**
+     * Mostrar lista de usuarios.
+     *
+     * 
+     */
+    public function index(Response $response)
+    {
+        ObjResponse::default();
+        try {
+            $roleAuth = Auth::user()->role_id;
+            // $list = VW_User::where("role_id", ">=", $roleAuth)
+            // ->orderBy('id', 'desc');
+            $list = VW_Employee::orderBy('id', 'desc');
+            if ($roleAuth > 1) $list = $list->where("active", true);
+            $list = $list->get();
+
+            return ObjResponse::success($list)->getData();
+            // $response->data["message"] = 'Peticion satisfactoria | Lista de usuarios.';
+            // $response->data["result"] = $list;
+
+            // Http::get(route('api.notifications'));
+        } catch (\Exception $ex) {
+            $msg = "UserController ~ index ~ Hubo un error -> " . $ex->getMessage();
+            Log::error($msg);
+            return ObjResponse::error($msg);
+        }
+        // return response()->json($response, $response->data["status_code"]);
     }
 
     /**

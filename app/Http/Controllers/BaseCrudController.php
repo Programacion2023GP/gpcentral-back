@@ -86,7 +86,6 @@ abstract class BaseCrudController extends Controller
     */
    public function index(Request $request): JsonResponse
    {
-      Log::info("messageAQUI EN LA INDEX");
       try {
          $query = $this->modelClass::query();
 

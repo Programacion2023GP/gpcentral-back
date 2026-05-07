@@ -31,7 +31,7 @@ class Controller extends BaseController
     public function ImageUp($request, $requestFileName, $dirPath, $id, $fileName, $create, $fakeName, $model)
     {
         try {
-            $dir = public_path($dirPath);
+            $dir = public_path("assets/$dirPath");
             if ($request->hasFile($requestFileName)) {
                 $img_file = $request->file($requestFileName);
                 $destination = is_null($id) ? $dir : "$dir/$id";
