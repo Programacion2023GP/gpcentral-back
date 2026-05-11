@@ -19,13 +19,16 @@ use Illuminate\Support\Str;
 class EmployeeController extends BaseCrudController
 {
     protected $modelClass = Employee::class;
+    protected $modelClassView = VW_Employee::class;
     protected $imageDirectory = 'employees';
     protected $imageFields = ['avatar', 'signature_image']; // Ajusta según tus campos
     protected $validationRules = [
         'employee_code' => 'required|string|max:50|unique:employees,employee_code',
         'hire_date' => 'required|date',
     ];
-    protected $selectLabel = ['CONCAT(employee_code, " - ", name, " ", plast_name)']; // Si usas vista
+    protected $selectId = "user_id";
+    protected $selectLabel = 'CONCAT(employee_code, " - ", full_name)'; // Si usas vista
+    // protected $selectLabel = ['CONCAT(employee_code, " - ", name, " ", plast_name)']; // Si usas vista
 
     public function __construct()
     {
@@ -39,18 +42,18 @@ class EmployeeController extends BaseCrudController
      *
      * 
      */
-    public function index(Response $response)
+    public function index(Request $request): JsonResponse
     {
         ObjResponse::default();
         try {
-            $roleAuth = Auth::user()->role_id;
+            $roleAuth = Auth::user()->role_id ?? null;
             // $list = VW_User::where("role_id", ">=", $roleAuth)
             // ->orderBy('id', 'desc');
-            $list = VW_Employee::orderBy('id', 'desc');
-            if ($roleAuth > 1) $list = $list->where("active", true);
+            $list = VW_Employee::orderBy('user_id', 'desc');
+            if ($roleAuth && $roleAuth > 1) $list = $list->where("active", true);
             $list = $list->get();
 
-            return ObjResponse::success($list)->getData();
+            return ObjResponse::success($list);
             // $response->data["message"] = 'Peticion satisfactoria | Lista de usuarios.';
             // $response->data["result"] = $list;
 
@@ -131,7 +134,7 @@ class EmployeeController extends BaseCrudController
             'mlast_name',
             'rfc',
             'curp',
-            'sex',
+            'gender',
             'phone',
             'avatar',
             'signature_image'
@@ -230,7 +233,7 @@ class EmployeeController extends BaseCrudController
                     'mlast_name' => $detail->mlast_name,
                     'rfc' => $detail->rfc,
                     'curp' => $detail->curp,
-                    'sex' => $detail->sex,
+                    'gender' => $detail->gender,
                     'phone' => $detail->phone,
                     'avatar' => $detail->avatar,
                     'signature' => $detail->signature_image,

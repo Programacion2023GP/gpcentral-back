@@ -37,7 +37,8 @@ return new class extends Migration
                 a.logo AS administration_logo,
                 u.id AS user_id,
                 u.username,
-                u.email
+                u.email,
+                u.active
             FROM employees e
             LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
             LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
@@ -46,6 +47,7 @@ return new class extends Migration
             LEFT JOIN organizations o ON d.organization_id = o.id
             LEFT JOIN administrations a ON a.end_date IS NULL
             LEFT JOIN users u ON e.id = u.employee_id
+            -- LEFT JOIN roles r ON r.id = u.role_id
         ");
     }
 

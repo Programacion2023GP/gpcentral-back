@@ -19,7 +19,7 @@ class EmployeeDetail extends Model
         'mlast_name',
         'rfc',
         'curp',
-        'sex',
+        'gender',
         'phone',
         'signature_image',
         'start_date',

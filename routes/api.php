@@ -8,6 +8,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EstadosController;
 use App\Http\Controllers\PositionController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserSystemAccessController;
 use App\Models\ObjResponse;
 use Illuminate\Http\Request;
@@ -38,7 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // Route::middleware('auth:sanctum')->group(function () {
 Route::post('/checkLoggedIn', function (Response $response, Request $request) {
-    $response->data = ObjResponse::SuccessResponse();
+    $response->data = ObjResponse::success();
     $id = Auth::user()->id;
     if ($id < 1 || !$id) {
         throw ValidationException::withMessages([
@@ -46,14 +47,14 @@ Route::post('/checkLoggedIn', function (Response $response, Request $request) {
         ]);
     }
     if ($request->url) {
-        $response->data = ObjResponse::DefaultResponse();
+        $response->data = ObjResponse::default();
         try {
             $menu = Menu::where('url', $request->url)->where('active', 1)->select("id")->first();
-            $response->data = ObjResponse::SuccessResponse();
+            $response->data = ObjResponse::success();
             $response->data["message"] = 'Peticion satisfactoria | validar inicio de sesión.';
             $response->data["result"] = $menu;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }

@@ -11,13 +11,14 @@ return new class extends Migration
         DB::statement("
             CREATE VIEW vw_users AS
             SELECT
-                u.id AS user_id,
+                u.id AS id,
                 u.username,
                 u.email,
-                u.active AS user_active,
+                u.active,
                 e.id AS employee_id,
                 e.employee_code,
                 e.hire_date,
+                e.active AS employee_active,
                 ed.name,
                 ed.plast_name,
                 ed.mlast_name,
@@ -46,6 +47,7 @@ return new class extends Migration
             LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
             LEFT JOIN organizations o ON d.organization_id = o.id
             LEFT JOIN administrations a ON a.end_date IS NULL
+            -- INNER JOIN roles r ON r.id = u.role_id
         ");
     }
 

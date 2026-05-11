@@ -1,32 +1,6 @@
-[2026-04-30 15:51:37] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(App\Http\Controllers\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(App\\Http\\Controllers\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:40)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:52:03] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(App\Http\Controllers\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(App\\Http\\Controllers\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:40)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:54:18] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:41)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:55:26] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:41)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:56:31] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:41)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:56:56] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response) must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response) must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:41)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 15:57:51] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response): Illuminate\Http\JsonResponse must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response): Illuminate\\Http\\JsonResponse must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:42)
-[stacktrace]
-#0 {main}
-"} 
-[2026-04-30 16:01:52] local.ERROR: Declaration of App\Http\Controllers\EmployeeController::index(Illuminate\Http\Response $response): Illuminate\Http\JsonResponse must be compatible with App\Http\Controllers\BaseCrudController::index(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Http\\Controllers\\EmployeeController::index(Illuminate\\Http\\Response $response): Illuminate\\Http\\JsonResponse must be compatible with App\\Http\\Controllers\\BaseCrudController::index(Illuminate\\Http\\Request $request): Illuminate\\Http\\JsonResponse at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/EmployeeController.php:42)
-[stacktrace]
-#0 {main}
-"} 
+[2026-05-11 11:34:25] local.INFO:   
+[2026-05-11 11:34:25] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  
+[2026-05-11 11:35:10] local.INFO:   
+[2026-05-11 11:35:10] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  
+[2026-05-11 11:35:28] local.INFO: 2  
+[2026-05-11 11:35:28] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  

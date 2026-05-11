@@ -20,6 +20,12 @@ abstract class BaseCrudController extends Controller
    protected $modelClass;
 
    /**
+    * Modelo si tiene vistas (ej. VW_Employee::class)
+    * @var string
+    */
+   protected $modelClassView = null;
+
+   /**
     * Recurso API (opcional, para transformar respuestas)
     * @var string|null
     */
@@ -63,6 +69,12 @@ abstract class BaseCrudController extends Controller
    protected $useAuthFilter = true;
 
    /**
+    * Indica si se debe filtrar role y mostrar del mismo rol e inferiores.
+    * @var bool
+    */
+   protected $filterByRoleAuth = false;
+
+   /**
     * Callback para modificar la consulta de index.
     * @var callable|null
     */
@@ -73,6 +85,13 @@ abstract class BaseCrudController extends Controller
     * @var callable|null
     */
    protected $selectIndexQueryCallback = null;
+
+   /**
+    * Configuración para el campo 'id' en selectIndex.
+    * Puede ser un string (nombre de columna) o un array con una expresión DB::raw.
+    * @var string|array
+    */
+   protected $selectId = 'id';
 
    /**
     * Configuración para el campo 'label' en selectIndex.
@@ -87,7 +106,7 @@ abstract class BaseCrudController extends Controller
    public function index(Request $request): JsonResponse
    {
       try {
-         $query = $this->modelClass::query();
+         $query = $this->modelClassView ? $this->modelClassView::query() : $this->modelClass::query();
 
          // Filtro por autenticación
          if ($this->useAuthFilter) {
@@ -95,6 +114,12 @@ abstract class BaseCrudController extends Controller
             if ($auth && isset($auth->role_id) && $auth->role_id > 2) {
                $query->where('active', true);
             }
+         }
+
+         // Filtrar que traiga solo del tipo de rol e inferiores
+         if ($this->filterByRoleAuth && Auth::user()) {
+            $roleAuth = Auth::user()->role_id;
+            $query->where("role_id", ">=", $roleAuth);
          }
 
          // Orden por defecto
@@ -129,7 +154,7 @@ abstract class BaseCrudController extends Controller
    public function selectIndex(Request $request)
    {
       try {
-         $query = $this->modelClass::where('active', true);
+         $query = $this->modelClassView ? $this->modelClassView::where('active', true) : $this->modelClass::where('active', true);
 
 
          if (is_array($this->selectLabel)) {
@@ -137,9 +162,7 @@ abstract class BaseCrudController extends Controller
          } else {
             $labelField = $this->selectLabel;
          }
-         Log::info("holissss");
-         Log::info($this->selectLabel);
-         $query->select('id as id', DB::raw("{$labelField} as label"));
+         $query->select("{$this->selectId} as id", DB::raw("{$labelField} as label"));
 
          if ($this->selectIndexQueryCallback) {
             call_user_func($this->selectIndexQueryCallback, $query, $request);

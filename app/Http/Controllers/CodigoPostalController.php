@@ -18,26 +18,26 @@ class CodigoPostalController extends Controller
     public function index(Response $response, $cp)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = CodigoPostal::where('codigopostal', $cp)->get();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Lista de comunidades.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
     public function indexGPD(Response $response, $cp)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = VWCommunityGPD::where('codigopostal', $cp)->get();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Lista de comunidades GPD.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -45,14 +45,14 @@ class CodigoPostalController extends Controller
     public function indexCommunities(Response $response, Int $municipio_id = null)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             if ($municipio_id > 0) $list = CodigoPostal::select('Colonia')->where('MunicipioId', $municipio_id)->get();
             else $list = CodigoPostal::all();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Lista de comunidades.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -60,7 +60,7 @@ class CodigoPostalController extends Controller
     public function indexCommunitiesGPD(Response $response, Int $municipio_id = null)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             if ($municipio_id > 0) $list = VWCommunityGPD::select('Colonia')->where('MunicipioId', $municipio_id)->get();
             else $list = VWCommunityGPD::all();
 
@@ -68,7 +68,7 @@ class CodigoPostalController extends Controller
             $response->data["message"] = 'Peticion satisfactoria | Lista de comunidades GPD.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -76,26 +76,26 @@ class CodigoPostalController extends Controller
     public function showCommunity(Response $response, $id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $community = Community::where('id', $id)->first();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Comunidad encontrada.';
             $response->data["result"] = $community;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
     public function showCommunityGPD(Response $response, $id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $community = VWCommunityGPD::where('id', $id)->first();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Comunidad GPD encontrada.';
             $response->data["result"] = $community;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -103,7 +103,7 @@ class CodigoPostalController extends Controller
     public function createOrUpdateCommunity(Response $response, Request $request)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $community = null;
             if ($request->id > 0) $community = Community::where('id', $request->id)->first();
             if (!$community) $community = new Community();
@@ -128,7 +128,7 @@ class CodigoPostalController extends Controller
             $msg =  "Error al crear o actualizar perimetro: " . $ex->getMessage();
             error_log($msg);
 
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -136,13 +136,13 @@ class CodigoPostalController extends Controller
     public function colonia(Response $response, $id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = CodigoPostal::where('id', $id)->first();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Comunidad encontrada.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -150,13 +150,13 @@ class CodigoPostalController extends Controller
     public function perimeters(Response $response, Request $request)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = $request->id > 0 ? Perimeter::find($request->id) : Perimeter::all();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = $request->id > 0 ? 'Peticion satisfactoria | Perimetro encontrado.' : 'Peticion satisfactoria | Perimetros encontrados.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -168,7 +168,7 @@ class CodigoPostalController extends Controller
      */
     public function selectIndexPerimeters(Response $response)
     {
-        $response->data = ObjResponse::DefaultResponse();
+        $response->data = ObjResponse::default();
         try {
             $list = Perimeter::where('active', true)
                 ->select('perimeters.id as id', 'perimeters.perimeter as label')
@@ -177,7 +177,7 @@ class CodigoPostalController extends Controller
             $response->data["message"] = 'Peticion satisfactoria | Lista de perimetros';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -185,7 +185,7 @@ class CodigoPostalController extends Controller
     public function createOrUpdatePerimeter(Response $response, Request $request)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $perimeter = Perimeter::where('id', $request->id)->first();
             if (!$perimeter) $perimeter = new Perimeter();
 
@@ -203,7 +203,7 @@ class CodigoPostalController extends Controller
             $msg =  "Error al crear o actualizar perimetro: " . $ex->getMessage();
             error_log($msg);
 
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -211,26 +211,26 @@ class CodigoPostalController extends Controller
     public function communitiesByPerimeter(Response $response, Int $perimeter_id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = CodigoPostal::where('PerimetroId', $perimeter_id)->get();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Comunidades por perimetro encontrados.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
     public function communitiesGPDByPerimeter(Response $response, Int $perimeter_id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = VWCommunityGPD::where('PerimetroId', $perimeter_id)->get();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Comunidades GPD por perimetro encontrados.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -238,7 +238,7 @@ class CodigoPostalController extends Controller
     public function assignPerimeterToCommunity(Response $response, Int $perimeter_id, Int $community_id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $community = Community::where('id', $community_id)->first();
             if ($community) {
                 $community->perimeter_id = $perimeter_id;
@@ -255,7 +255,7 @@ class CodigoPostalController extends Controller
                 $response->data["alert_text"] = 'No se encontro communidad.';
             }
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -263,7 +263,7 @@ class CodigoPostalController extends Controller
     public function getMunicipioByName($municipio)
     {
         try {
-            // $response->data = ObjResponse::DefaultResponse();
+            // $response->data = ObjResponse::default();
             $municipio = Municipality::where('name', $municipio)->first();
             // $response->data = ObjResponse::CorrectResponse();
             // $response->data["message"] = 'Peticion satisfactoria | Municipio encontrado.';
@@ -284,14 +284,14 @@ class CodigoPostalController extends Controller
      */
     public function selectIndexTypesCommunity(Response $response)
     {
-        $response->data = ObjResponse::DefaultResponse();
+        $response->data = ObjResponse::default();
         try {
             $list = VWTypeCommunity::orderBy('type')->get();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Lista de tipos de comunidades';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }

@@ -18,13 +18,13 @@ class DepartamentoController extends Controller
     public function index(Response $response)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = DepartamentoView::all();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | Lista de comunidades.';
             $response->data["result"] = $list;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -36,7 +36,7 @@ class DepartamentoController extends Controller
      */
     public function selectIndex(Response $response)
     {
-        $response->data = ObjResponse::DefaultResponse();
+        $response->data = ObjResponse::default();
         try {
             $list = DepartamentoView::where('activo', true)
                 ->select('id as id', DB::raw("CONCAT(departamento, ' (', clave_org, ')') as label"))
@@ -48,7 +48,7 @@ class DepartamentoController extends Controller
             $response->data["result"] = $list;
             $response->data["toast"] = false;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -59,7 +59,7 @@ class DepartamentoController extends Controller
     public function store(Request $request, Response $response)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $list = DepartamentoView::all();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | departamento creado.';
@@ -67,7 +67,7 @@ class DepartamentoController extends Controller
         } catch (\Exception $ex) {
             $msg = "DepartamentoController ~ store ~ Error al crear -> " . $ex->getMessage();
             Log::error($msg);
-            $response->data = ObjResponse::CatchResponse($msg);
+            $response->data = ObjResponse::error($msg);
         }
         return response()->json($response, $response->data["status_code"]);
     }
@@ -78,13 +78,13 @@ class DepartamentoController extends Controller
     public function show(Response $response, string $id)
     {
         try {
-            $response->data = ObjResponse::DefaultResponse();
+            $response->data = ObjResponse::default();
             $departmaneto = DepartamentoView::where('id', $id)->firstOrFail();
             $response->data = ObjResponse::CorrectResponse();
             $response->data["message"] = 'Peticion satisfactoria | departamento encontrado.';
             $response->data["result"] = $departmaneto;
         } catch (\Exception $ex) {
-            $response->data = ObjResponse::CatchResponse($ex->getMessage());
+            $response->data = ObjResponse::error($ex->getMessage());
         }
         return response()->json($response, $response->data["status_code"]);
     }
