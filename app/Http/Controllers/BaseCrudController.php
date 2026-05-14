@@ -245,10 +245,10 @@ abstract class BaseCrudController extends Controller
    /**
     * Eliminar un registro.
     */
-   public function destroy(Response $response, $id)
+   public function delete( Request $request)
    {
       try {
-         $model = $this->modelClass::find($id);
+         $model = $this->modelClass::find($request->id);
          if (!$model) {
             return ObjResponse::notFound('Registro no encontrado');
          }

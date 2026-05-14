@@ -41,9 +41,10 @@ class DepartmentController extends BaseCrudController
     /**
      * Sobrescribir createOrUpdate para manejar versionado.
      */
-    public function createOrUpdate(Request $request, $id = null)
+    public function createOrUpdate(Request $request)
     {
         try {
+            $id = $request->id ?? null;
             // Validar
             $validator = $this->validateRequest($request, $id);
             if ($validator->fails()) {

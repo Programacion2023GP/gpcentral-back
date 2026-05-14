@@ -1,6 +1,0 @@
-[2026-05-11 11:34:25] local.INFO:   
-[2026-05-11 11:34:25] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  
-[2026-05-11 11:35:10] local.INFO:   
-[2026-05-11 11:35:10] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  
-[2026-05-11 11:35:28] local.INFO: 2  
-[2026-05-11 11:35:28] local.ERROR: UserController ~ selectIndexByRole ~ Hubo un error -> Attempt to read property "role_id" on null  

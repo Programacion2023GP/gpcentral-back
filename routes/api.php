@@ -7,6 +7,7 @@ use App\Http\Controllers\CodigoPostalController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EstadosController;
+use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserSystemAccessController;
@@ -74,7 +75,7 @@ Route::prefix("logs")->group(function () {
 //     Route::get("/getMenusByRole/{pages_read}", [MenuController::class, 'getMenusByRole']);
 //     Route::get("/getHeadersMenusSelect", [MenuController::class, 'getHeadersMenusSelect']);
 //     Route::get("/selectIndexToRoles", [MenuController::class, 'selectIndexToRoles']);
-//     Route::post("/createOrUpdate/{id?}", [MenuController::class, 'createOrUpdate']);
+//     Route::post("/createOrUpdate", [MenuController::class, 'createOrUpdate']);
 //     Route::get("/id/{id}", [MenuController::class, 'show']);
 //     Route::get("/disEnable/{id}/{active}", [MenuController::class, 'disEnable']);
 
@@ -84,9 +85,9 @@ Route::prefix("logs")->group(function () {
 // Route::prefix("roles")->group(function () {
 //     Route::get("/", [RoleController::class, 'index']);
 //     Route::get("/selectIndex", [RoleController::class, 'selectIndex']);
-//     Route::post("/createOrUpdate/{id?}", [RoleController::class, 'createOrUpdate']);
+//     Route::post("/createOrUpdate", [RoleController::class, 'createOrUpdate']);
 //     Route::get("/id/{id}", [RoleController::class, 'show']);
-//     Route::get("/delete/{id}", [RoleController::class, 'delete']);
+//     Route::delete("/delete", [RoleController::class, 'delete']);
 //     Route::get("/disEnable/{id}/{active}", [RoleController::class, 'disEnable']);
 //     Route::get("/deleteMultiple", [RoleController::class, 'deleteMultiple']);
 
@@ -96,19 +97,29 @@ Route::prefix("logs")->group(function () {
 Route::prefix("administrations")->group(function () {
     Route::get("/", [AdministrationController::class, 'index']);
     Route::get("/selectIndex", [AdministrationController::class, 'selectIndex']);
-    Route::post("/createOrUpdate/{id?}", [AdministrationController::class, 'createOrUpdate']);
+    Route::post("/createOrUpdate", [AdministrationController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [AdministrationController::class, 'show']);
-    Route::get("/delete/{id}", [AdministrationController::class, 'delete']);
+    Route::delete("/delete", [AdministrationController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [AdministrationController::class, 'disEnable']);
     Route::get("/deleteMultiple", [AdministrationController::class, 'deleteMultiple']);
+});
+
+Route::prefix("organizations")->group(function () {
+    Route::get("/", [OrganizationController::class, 'index']);
+    Route::get("/selectIndex", [OrganizationController::class, 'selectIndex']);
+    Route::post("/createOrUpdate", [OrganizationController::class, 'createOrUpdate']);
+    Route::get("/id/{id}", [OrganizationController::class, 'show']);
+    Route::delete("/delete", [OrganizationController::class, 'delete']);
+    Route::get("/disEnable/{id}/{active}", [OrganizationController::class, 'disEnable']);
+    Route::get("/deleteMultiple", [OrganizationController::class, 'deleteMultiple']);
 });
 
 Route::prefix("departments")->group(function () {
     Route::get("/", [DepartmentController::class, 'index']);
     Route::get("/selectIndex", [DepartmentController::class, 'selectIndex']);
-    Route::post("/createOrUpdate/{id?}", [DepartmentController::class, 'createOrUpdate']);
+    Route::post("/createOrUpdate", [DepartmentController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [DepartmentController::class, 'show']);
-    Route::get("/delete/{id}", [DepartmentController::class, 'delete']);
+    Route::delete("/delete", [DepartmentController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [DepartmentController::class, 'disEnable']);
     Route::get("/deleteMultiple", [DepartmentController::class, 'deleteMultiple']);
 });
@@ -116,9 +127,9 @@ Route::prefix("departments")->group(function () {
 Route::prefix("positions")->group(function () {
     Route::get("/", [PositionController::class, 'index']);
     Route::get("/selectIndex", [PositionController::class, 'selectIndex']);
-    Route::post("/createOrUpdate/{id?}", [PositionController::class, 'createOrUpdate']);
+    Route::post("/createOrUpdate", [PositionController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [PositionController::class, 'show']);
-    Route::get("/delete/{id}", [PositionController::class, 'delete']);
+    Route::delete("/delete", [PositionController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [PositionController::class, 'disEnable']);
     Route::get("/deleteMultiple", [PositionController::class, 'deleteMultiple']);
 });
@@ -126,9 +137,9 @@ Route::prefix("positions")->group(function () {
 Route::prefix("employees")->group(function () {
     Route::get("/", [EmployeeController::class, 'index']);
     Route::get("/selectIndex", [EmployeeController::class, 'selectIndex']);
-    Route::post("/createOrUpdate/{id?}", [EmployeeController::class, 'createOrUpdate']);
+    Route::post("/createOrUpdate", [EmployeeController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [EmployeeController::class, 'show']);
-    Route::get("/delete/{id}", [EmployeeController::class, 'delete']);
+    Route::delete("/delete", [EmployeeController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [EmployeeController::class, 'disEnable']);
     Route::get("/deleteMultiple", [EmployeeController::class, 'deleteMultiple']);
 });
@@ -137,9 +148,9 @@ Route::prefix("users")->group(function () {
     Route::get("/", [UserController::class, 'index']);
     Route::get("/selectIndexByRole/{role_id}", [UserController::class, 'selectIndexByRole']);
     Route::get("/selectIndex", [UserController::class, 'selectIndex']);
-    Route::post("/createOrUpdate/{id?}", [UserController::class, 'createOrUpdate']);
+    Route::post("/createOrUpdate", [UserController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [UserController::class, 'show']);
-    Route::get("/delete/{id}", [UserController::class, 'delete']);
+    Route::delete("/delete", [UserController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [UserController::class, 'disEnable']);
     Route::get("/deleteMultiple", [UserController::class, 'deleteMultiple']);
 });
