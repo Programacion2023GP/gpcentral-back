@@ -15,7 +15,7 @@ class Position extends Model
     protected $fillable = [
         'uuid',
         'organization_id',
-        'department_uuid',
+        // 'department_uuid',
         'name',
         'parent_position_uuid',
         'start_date',
@@ -44,15 +44,15 @@ class Position extends Model
         return $this->belongsTo(Organization::class);
     }
 
-    // Relación con el departamento (versión correspondiente)
-    public function department()
-    {
-        return $this->belongsTo(Department::class, 'department_uuid', 'uuid')
-            ->where('start_date', '<=', $this->start_date) // O usar un scope con fecha?
-            // Nota: esta relación simple asume que el departamento tiene una versión actual.
-            // Para consultas históricas es mejor usar un scope y fecha explícita.
-            ->whereNull('end_date');
-    }
+    // // Relación con el departamento (versión correspondiente)
+    // public function department()
+    // {
+    //     return $this->belongsTo(Department::class, 'department_uuid', 'uuid')
+    //         ->where('start_date', '<=', $this->start_date) // O usar un scope con fecha?
+    //         // Nota: esta relación simple asume que el departamento tiene una versión actual.
+    //         // Para consultas históricas es mejor usar un scope y fecha explícita.
+    //         ->whereNull('end_date');
+    // }
 
     public function parentPosition()
     {

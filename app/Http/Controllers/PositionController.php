@@ -14,8 +14,7 @@ class PositionController extends BaseCrudController
     public function __construct()
     {
         $this->validationRules = [
-            'organization_id' => 'required|exists:organizations,id',
-            'department_uuid' => 'nullable|exists:departments,uuid',
+            // 'department_uuid' => 'nullable|exists:departments,uuid',
             'name' => 'required|string|max:255',
             'parent_position_uuid' => 'nullable|exists:positions,uuid',
             'start_date' => 'required|date',

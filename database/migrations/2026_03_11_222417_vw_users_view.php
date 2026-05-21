@@ -27,6 +27,7 @@ return new class extends Migration
                 ed.rfc,
                 ed.curp,
                 ed.phone,
+                ed.gender,
                 ed.avatar,
                 ed.signature_image,
                 ea.position_uuid,
@@ -44,7 +45,7 @@ return new class extends Migration
             LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
             LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
             LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
-            LEFT JOIN departments d ON p.department_uuid = d.uuid AND d.end_date IS NULL
+            LEFT JOIN departments d ON ea.department_uuid = d.uuid AND d.end_date IS NULL
             LEFT JOIN organizations o ON d.organization_id = o.id
             LEFT JOIN administrations a ON a.end_date IS NULL
             -- INNER JOIN roles r ON r.id = u.role_id

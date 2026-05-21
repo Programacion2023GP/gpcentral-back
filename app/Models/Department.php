@@ -46,12 +46,12 @@ class Department extends Model
         return $this->belongsTo(Organization::class);
     }
 
-    // Relación con puestos (versiones actuales que referencian este departamento)
-    public function positions()
-    {
-        return $this->hasMany(Position::class, 'department_uuid', 'uuid')
-            ->whereNull('end_date');
-    }
+    // // Relación con puestos (versiones actuales que referencian este departamento)
+    // public function positions()
+    // {
+    //     return $this->hasMany(Position::class, 'department_uuid', 'uuid')
+    //         ->whereNull('end_date');
+    // }
 
     // Scope para obtener la versión activa en una fecha
     public function scopeActiveAt($query, $date)

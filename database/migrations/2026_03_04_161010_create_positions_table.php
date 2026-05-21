@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid('uuid')->index();                    // identificador lógico del puesto
             // $table->foreignId('organization_id')->constrained();
             // $table->foreignId('department_id')->constrained();
-            $table->uuid('department_uuid')->nullable()->index(); // UUID del departamento lógico
+            // $table->uuid('department_uuid')->nullable()->index(); // UUID del departamento lógico
             $table->string('name', 255);
             $table->uuid('parent_position_uuid')->nullable()->index(); // puesto superior (jefe)
             $table->date('start_date');
