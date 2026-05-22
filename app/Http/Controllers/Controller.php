@@ -70,7 +70,7 @@ class Controller extends BaseController
         try {
             $permissions = 0777;
             // Eliminar versiones anteriores con extensiones comunes
-            foreach (['PNG', 'JPG', 'JPEG', 'png', 'jpg', 'jpeg'] as $ext) {
+            foreach (['PNG', 'JPG', 'JPEG', 'png', 'jpg', 'jpeg', 'avif', 'webp'] as $ext) {
                 $file = "$dir/$imgName.$ext";
                 if (file_exists($file)) {
                     chmod($file, $permissions);

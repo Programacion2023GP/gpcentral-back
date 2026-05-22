@@ -245,7 +245,7 @@ abstract class BaseCrudController extends Controller
    /**
     * Eliminar un registro.
     */
-   public function delete( Request $request)
+   public function delete(Request $request)
    {
       try {
          $model = $this->modelClass::find($request->id);

@@ -69,9 +69,11 @@ class EmployeeController extends BaseCrudController
     /**
      * Crear empleado con sus detalles y asignación inicial.
      */
-    public function createOrUpdate(Request $request, $id = null)
+    public function createOrUpdate(Request $request)
     {
         try {
+            $id = $request->id ?? null;
+            if ($id === null) $id = $request->employee_id ?? null;
             // Validar datos básicos de employee
             $validator = $this->validateRequest($request, $id);
             if ($validator->fails()) {
@@ -91,7 +93,7 @@ class EmployeeController extends BaseCrudController
             }
 
             // Manejar detalles del empleado (versionado)
-            $this->saveEmployeeDetail($employee, $request, $id ? false : true);
+            $employeeDetail = $this->saveEmployeeDetail($employee, $request, $id ? false : true);
 
             // Manejar asignación a puesto (versionado)
             if ($request->has('position_uuid')) {
@@ -108,7 +110,7 @@ class EmployeeController extends BaseCrudController
                     strtoupper($field),
                     is_null($id),
                     "noImage.png",
-                    $employee
+                    $employeeDetail
                 );
             }
 
@@ -153,7 +155,8 @@ class EmployeeController extends BaseCrudController
         $detailData['start_date'] = $request->get('detail_start_date', now()->toDateString());
         $detailData['end_date'] = null;
         $detailData['active'] = true;
-        EmployeeDetail::create($detailData);
+        $employeeDetail = EmployeeDetail::create($detailData);
+        return $employeeDetail;
     }
 
     /**
@@ -170,6 +173,7 @@ class EmployeeController extends BaseCrudController
 
         EmployeeAssignment::create([
             'employee_id' => $employee->id,
+            'department_uuid' => $request->department_uuid,
             'position_uuid' => $request->position_uuid,
             'start_date' => $request->get('assignment_start_date', now()->toDateString()),
             'end_date' => null,
