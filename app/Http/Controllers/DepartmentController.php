@@ -5,10 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use App\Models\ObjResponse;
 use App\Models\VW_User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class DepartmentController extends BaseCrudController
@@ -126,6 +125,34 @@ class DepartmentController extends BaseCrudController
         } catch (\Exception $ex) {
             Log::error("DepartmentController ~ show: " . $ex->getMessage());
             return ObjResponse::serverError('Error al obtener departamento', $ex);
+        }
+    }
+
+    public function directors($uuid): JsonResponse
+    {
+        try {
+            $department = Department::where('uuid', $uuid)->whereNull('end_date')->firstOrFail();
+            $history = $department->directors;
+
+            $data = $history->map(function ($assignment) {
+                $detail = $assignment->employee->currentDetail;
+                return [
+                    'id' => $assignment->id,
+                    'employee_id' => $assignment->employee_id,
+                    'employee_name' => $detail
+                        ? trim("{$detail->name} {$detail->plast_name} {$detail->mlast_name}")
+                        : null,
+                    'position_uuid' => $assignment->position_uuid,
+                    'position_name' => $assignment->position->name ?? null,
+                    'start_date' => $assignment->start_date,
+                    'end_date' => $assignment->end_date,
+                ];
+            });
+
+            return ObjResponse::success($data, 'Historial de directores obtenido');
+        } catch (\Exception $ex) {
+            Log::error("DepartmentController ~ directors: " . $ex->getMessage());
+            return ObjResponse::serverError('Error al obtener historial de directores', $ex);
         }
     }
 }

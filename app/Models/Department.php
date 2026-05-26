@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\EmployeeAssignment;
+use App\Models\Position;
 use App\Traits\Auditable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -52,6 +54,18 @@ class Department extends Model
     //     return $this->hasMany(Position::class, 'department_uuid', 'uuid')
     //         ->whereNull('end_date');
     // }
+
+    public function directors()
+    {
+        $directorPositionUuids = Position::where('name', 'LIKE', '%DIRECTOR%')
+            ->distinct()
+            ->pluck('uuid');
+
+        return $this->hasMany(EmployeeAssignment::class, 'department_uuid', 'uuid')
+            ->whereIn('position_uuid', $directorPositionUuids)
+            ->with(['employee.currentDetail', 'position'])
+            ->orderBy('start_date');
+    }
 
     // Scope para obtener la versión activa en una fecha
     public function scopeActiveAt($query, $date)

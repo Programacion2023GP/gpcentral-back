@@ -122,6 +122,7 @@ Route::prefix("departments")->group(function () {
     Route::delete("/delete", [DepartmentController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [DepartmentController::class, 'disEnable']);
     Route::get("/deleteMultiple", [DepartmentController::class, 'deleteMultiple']);
+    Route::get("directors/{uuid}", [DepartmentController::class, 'directors']);
 });
 
 Route::prefix("positions")->group(function () {
