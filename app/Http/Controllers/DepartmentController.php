@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Department;
 use App\Models\ObjResponse;
+use App\Models\VW_Department;
 use App\Models\VW_User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Log;
 class DepartmentController extends BaseCrudController
 {
     protected $modelClass = Department::class;
+    protected $modelClassView = VW_Department::class;
     protected $imageDirectory = 'departments';
     protected $imageFields = ['seal_image'];
     protected $defaultOrderBy = ['id' => 'desc'];
