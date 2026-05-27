@@ -15,6 +15,7 @@ class DepartmentController extends BaseCrudController
 {
     protected $modelClass = Department::class;
     protected $modelClassView = VW_Department::class;
+    protected $versioned = true;
     protected $imageDirectory = 'departments';
     protected $imageFields = ['seal_image'];
     protected $defaultOrderBy = ['id' => 'desc'];
@@ -37,71 +38,6 @@ class DepartmentController extends BaseCrudController
         //         }
         //     }
         // };
-    }
-
-    /**
-     * Sobrescribir createOrUpdate para manejar versionado.
-     */
-    public function createOrUpdate(Request $request)
-    {
-        try {
-            $id = $request->id ?? null;
-            // Validar
-            $validator = $this->validateRequest($request, $id);
-            if ($validator->fails()) {
-                return ObjResponse::validationError($validator->errors()->toArray());
-            }
-
-            if ($id) {
-                // Es actualización: cerrar versión actual y crear nueva
-                $current = Department::where('id', $id)->whereNull('end_date')->first();
-                if (!$current) {
-                    return ObjResponse::notFound('Versión actual no encontrada');
-                }
-                $uuid = $current->uuid;
-                $effectiveDate = $request->get('start_date', now()->toDateString());
-
-                // Cerrar versión actual
-                $current->end_date = $effectiveDate;
-                $current->active = false;
-                $current->save();
-
-                // Crear nueva versión
-                $data = $request->except($this->imageFields);
-                $data['uuid'] = $uuid;
-                $data['start_date'] = $effectiveDate;
-                $data['end_date'] = null;
-                $data['active'] = true;
-                $new = Department::create($data);
-            } else {
-                // Creación nueva
-                $data = $request->except($this->imageFields);
-                $data['uuid'] = (string) Str::uuid();
-                $data['start_date'] = $request->get('start_date', now()->toDateString());
-                $data['active'] = true;
-                $new = Department::create($data);
-            }
-
-            // Procesar imágenes (se asocian al nuevo registro)
-            foreach ($this->imageFields as $field) {
-                $this->ImageUp(
-                    $request,
-                    $field,
-                    $this->imageDirectory,
-                    $new->id,
-                    strtoupper($field),
-                    is_null($id),
-                    "noImage.png",
-                    $new
-                );
-            }
-
-            $message = $id ? 'Departamento actualizado' : 'Departamento creado';
-            return ObjResponse::success($new, $message);
-        } catch (\Exception $ex) {
-            Log::error("DepartmentController ~ createOrUpdate: " . $ex->getMessage());
-            return ObjResponse::serverError('Error al guardar', $ex);
-        }
     }
 
     /**

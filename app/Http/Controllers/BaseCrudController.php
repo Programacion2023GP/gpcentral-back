@@ -8,7 +8,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 abstract class BaseCrudController extends Controller
@@ -73,6 +72,12 @@ abstract class BaseCrudController extends Controller
     * @var bool
     */
    protected $filterByRoleAuth = false;
+
+   /**
+    * Indica si el modelo usa versionado (uuid + start_date/end_date).
+    * @var bool
+    */
+   protected $versioned = false;
 
    /**
     * Callback para modificar la consulta de index.
@@ -186,16 +191,16 @@ abstract class BaseCrudController extends Controller
       try {
          $id = $request->id ?? null;
 
-         // Validar
          $validator = $this->validateRequest($request, $id);
          if ($validator->fails()) {
             return ObjResponse::validationError($validator->errors()->toArray());
          }
 
-         $model = $id ? $this->modelClass::find($id) : new $this->modelClass;
-         if ($id && !$model) {
-            return ObjResponse::notFound('Registro no encontrado');
+         if ($this->versioned) {
+            return $this->versionedCreateOrUpdate($request, $id);
          }
+
+         $model = $id ? $this->modelClass::find($id) : new $this->modelClass;
 
          $fillData = $request->except($this->imageFields);
          $model->fill($fillData);
@@ -220,6 +225,54 @@ abstract class BaseCrudController extends Controller
          Log::error(get_class($this) . " ~ createOrUpdate: " . $ex->getMessage());
          return ObjResponse::serverError('Error al guardar', $ex);
       }
+   }
+
+   /**
+    * Versión concreta para modelos versionados (uuid + start_date/end_date).
+    * Cierra la versión actual y crea una nueva con el mismo uuid.
+    */
+   protected function versionedCreateOrUpdate(Request $request, $id)
+   {
+      if ($id) {
+         $current = $this->modelClass::where('id', $id)->whereNull('end_date')->first();
+         if (!$current) {
+            return ObjResponse::notFound('Versión actual no encontrada');
+         }
+
+         $effectiveDate = $request->get('start_date', now()->toDateString());
+
+         $current->end_date = $effectiveDate;
+         $current->active = false;
+         $current->save();
+
+         $data = $request->except($this->imageFields);
+         $data['uuid'] = $current->uuid;
+         $data['start_date'] = $effectiveDate;
+         $data['end_date'] = null;
+         $data['active'] = true;
+         $new = $this->modelClass::create($data);
+      } else {
+         $data = $request->except($this->imageFields);
+         $data['start_date'] = $request->get('start_date', now()->toDateString());
+         $data['active'] = true;
+         $new = $this->modelClass::create($data);
+      }
+
+      foreach ($this->imageFields as $field) {
+         $this->ImageUp(
+            $request,
+            $field,
+            $this->imageDirectory,
+            $new->id,
+            strtoupper($field),
+            is_null($id),
+            "noImage.png",
+            $new
+         );
+      }
+
+      $message = $id ? 'Registro actualizado' : 'Registro creado';
+      return ObjResponse::success($new, $message);
    }
 
    /**
