@@ -36,7 +36,8 @@ class Controller extends BaseController
                 $img_file = $request->file($requestFileName);
                 $destination = is_null($id) ? $dir : "$dir/$id";
                 $dir_path = is_null($id) ? $dirPath : "$dirPath/$id";
-                $img_name = $this->ImgUpload($img_file, $destination, $dir_path, is_null($id) ? $fileName : "$id-$fileName");
+                $timestamp = now()->format('Ymd_Hisu');
+                $img_name = $this->ImgUpload("$img_file" . "_" . $timestamp, $destination, $dir_path, is_null($id) ? $fileName : "$id-$fileName");
                 $model->$requestFileName = $img_name;
                 $model->save();
             } else {
