@@ -122,7 +122,7 @@ Route::prefix("departments")->group(function () {
     Route::delete("/delete", [DepartmentController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [DepartmentController::class, 'disEnable']);
     Route::get("/deleteMultiple", [DepartmentController::class, 'deleteMultiple']);
-    Route::get("directors/{uuid}", [DepartmentController::class, 'directors']);
+    Route::post("directors", [DepartmentController::class, 'directors']);
 });
 
 Route::prefix("positions")->group(function () {
@@ -143,6 +143,8 @@ Route::prefix("employees")->group(function () {
     Route::delete("/delete", [EmployeeController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [EmployeeController::class, 'disEnable']);
     Route::get("/deleteMultiple", [EmployeeController::class, 'deleteMultiple']);
+    Route::get("directors", [EmployeeController::class, 'directors']);
+    Route::post("/change-director-assignment", [EmployeeController::class, 'changeDirectorAssignment']);
 });
 
 Route::prefix("users")->group(function () {

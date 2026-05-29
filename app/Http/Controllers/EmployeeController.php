@@ -6,6 +6,7 @@ use App\Models\Employee;
 use App\Models\EmployeeDetail;
 use App\Models\EmployeeAssignment;
 use App\Models\ObjResponse;
+use App\Models\Position;
 use App\Models\User;
 use App\Models\VW_Employee;
 use Illuminate\Http\JsonResponse;
@@ -262,6 +263,96 @@ class EmployeeController extends BaseCrudController
         } catch (\Exception $ex) {
             Log::error("EmployeeController ~ snapshot: " . $ex->getMessage());
             return ObjResponse::serverError('Error al obtener snapshot', $ex);
+        }
+    }
+
+    /**
+     * Mostrar empleados con puesto de director.
+     *
+     * 
+     */
+    public function directors(Request $request): JsonResponse
+    {
+        ObjResponse::default();
+        try {
+            $roleAuth = Auth::user()->role_id ?? null;
+
+            $positionsDirector = Position::select("uuid")
+                ->where("active", true)
+                ->where("name", "like", "%DIRECTOR%")
+                ->where("name", "not like", "%SUB%DIRECTOR%")
+                ->get();
+
+
+            // $list = VW_User::where("role_id", ">=", $roleAuth)
+            // ->orderBy('id', 'desc');
+            $list = VW_Employee::orderBy('full_name', 'desc')->where("active", true)->whereIn("position_uuid", $positionsDirector);
+            $list = $list->get();
+
+            return ObjResponse::success($list);
+        } catch (\Exception $ex) {
+            $msg = "UserController ~ index ~ Hubo un error -> " . $ex->getMessage();
+            Log::error($msg);
+            return ObjResponse::error($msg);
+        }
+    }
+
+    public function changeDirectorAssignment(Request $request): JsonResponse
+    {
+        try {
+            $assignmentId = $request->assignment_id;
+            $newEmployeeId = $request->new_employee_id;
+            $startDate = $request->get('start_date', now()->toDateString());
+
+            if (!$assignmentId || !$newEmployeeId) {
+                return ObjResponse::error('assignment_id y new_employee_id son requeridos');
+            }
+
+            DB::beginTransaction();
+
+            $currentAssignment = EmployeeAssignment::where('id', $assignmentId)
+                ->whereNull('end_date')
+                ->first();
+
+            if (!$currentAssignment) {
+                DB::rollBack();
+                return ObjResponse::notFound('Asignación actual no encontrada o ya está cerrada');
+            }
+
+            $departmentUuid = $currentAssignment->department_uuid;
+            $positionUuid = $request->get('new_position_uuid', $currentAssignment->position_uuid);
+
+            $currentAssignment->end_date = $startDate;
+            $currentAssignment->active = false;
+            $currentAssignment->save();
+
+            $newEmployee = Employee::find($newEmployeeId);
+            if ($newEmployee && $newEmployee->currentAssignment) {
+                $newEmployee->currentAssignment->update([
+                    'end_date' => $startDate,
+                    'active' => false
+                ]);
+            }
+
+            $newAssignment = EmployeeAssignment::create([
+                'employee_id' => $newEmployeeId,
+                'department_uuid' => $departmentUuid,
+                'position_uuid' => $positionUuid,
+                'start_date' => $startDate,
+                'end_date' => null,
+                'active' => true,
+            ]);
+
+            DB::commit();
+
+            return ObjResponse::success(
+                $newAssignment->load('employee.currentDetail', 'position', 'department'),
+                'Asignación de director actualizada'
+            );
+        } catch (\Exception $ex) {
+            DB::rollBack();
+            Log::error("EmployeeController ~ changeDirectorAssignment: " . $ex->getMessage());
+            return ObjResponse::serverError('Error al cambiar asignación de director', $ex);
         }
     }
 }
