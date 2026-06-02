@@ -12,6 +12,7 @@ use App\Models\VW_User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class DepartmentController extends BaseCrudController
@@ -72,39 +73,38 @@ class DepartmentController extends BaseCrudController
     public function directors(Request $request): JsonResponse
     {
         try {
-            $department_uuid = $request->uuid;
+            $departmentUuid = $request->department_uuid;
 
-            $positionsDirector = Position::select("uuid")
-                ->where("active", true)
+            $positionsDirector = Position::where("active", true)
                 ->where("name", "like", "%DIRECTOR%")
                 ->where("name", "not like", "%SUB%DIRECTOR%")
-                ->get();
+                ->pluck('uuid');
 
-            $history = EmployeeAssignment::where('department_uuid', $department_uuid)
-                ->where("active", true)
+            $history = EmployeeAssignment::where('department_uuid', $departmentUuid)
                 ->whereIn("position_uuid", $positionsDirector)
-                ->whereNull('end_date')
+                ->select('employee_id', 'position_uuid', 'start_date', 'end_date', 'active', DB::raw('MAX(id) as id'), DB::raw('MAX(created_at) as created_at'))
+                ->groupBy('employee_id', 'position_uuid', 'start_date', 'end_date', 'active')
+                ->orderBy('created_at', 'desc')
                 ->get();
-            // $history = EmployeeAssignment::where('department_uuid', $department_uuid)->whereIn("position_uuid", $positionsDirector)->get();
-            $data = [];
+            // Log::info($history);
 
             $data = $history->map(function ($assignment) {
                 $employee = VW_Employee::where("employee_id", $assignment->employee_id)->first();
                 return [
+                    'id' => $assignment->id,
                     'assignment_id' => $assignment->id,
-                    'id' => $employee->employee_id,
-                    'avatar' => $employee->avatar,
-                    'signature_image' => $employee->signature_image,
-                    'employee_id' => $employee->employee_id,
-                    'employee_code' => $employee->employee_code,
-                    'employee_name' => $employee
+                    'director_avatar' => $employee->avatar,
+                    'director_signature_image' => $employee->signature_image,
+                    'director_employee_id' => $employee->employee_id,
+                    'director_employee_code' => $employee->employee_code,
+                    'director_name' => $employee
                         ? trim("{$employee->full_name}")
                         : null,
                     'position_uuid' => $employee->position_uuid,
                     'position_name' => $employee->position_name ?? null,
-                    'position_start' => $employee->position_start,
-                    'position_end' => $employee->position_end,
-                    'position_active' => $employee->position_active,
+                    'assignment_start' => $assignment->start_date,
+                    'assignment_end' => $assignment->end_date,
+                    'assignment_active' => $assignment->active,
                 ];
             });
 

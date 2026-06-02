@@ -282,6 +282,7 @@ class EmployeeController extends BaseCrudController
                 ->where("name", "like", "%DIRECTOR%")
                 ->where("name", "not like", "%SUB%DIRECTOR%")
                 ->get();
+            // Log::info($positionsDirector);
 
 
             // $list = VW_User::where("role_id", ">=", $roleAuth)
@@ -302,22 +303,34 @@ class EmployeeController extends BaseCrudController
         try {
             $assignmentId = $request->assignment_id;
             $newEmployeeId = $request->new_employee_id;
+            $newPositionUuid = $request->new_position_uuid;
             $startDate = $request->get('start_date', now()->toDateString());
 
-            if (!$assignmentId || !$newEmployeeId) {
-                return ObjResponse::error('assignment_id y new_employee_id son requeridos');
+            if (!$assignmentId || !$newEmployeeId || !$newPositionUuid) {
+                Log::info($request);
+                Log::info($assignmentId);
+                Log::info($newEmployeeId);
+                Log::info($newPositionUuid);
+                return ObjResponse::error('Asignación invalida, Empleado ivalido y Puesto invalido, son requeridos');
             }
-
-            DB::beginTransaction();
 
             $currentAssignment = EmployeeAssignment::where('id', $assignmentId)
                 ->whereNull('end_date')
                 ->first();
+            Log::info($request);
+            Log::info($currentAssignment);
+
 
             if (!$currentAssignment) {
                 DB::rollBack();
                 return ObjResponse::notFound('Asignación actual no encontrada o ya está cerrada');
             }
+
+            if (($newEmployeeId === $currentAssignment->employee_id) && ($newPositionUuid === $currentAssignment->position_uuid)) {
+                return ObjResponse::error('La asingación que se intenta, es la actual');
+            }
+
+            DB::beginTransaction();
 
             $departmentUuid = $currentAssignment->department_uuid;
             $positionUuid = $request->get('new_position_uuid', $currentAssignment->position_uuid);
@@ -345,10 +358,11 @@ class EmployeeController extends BaseCrudController
 
             DB::commit();
 
-            return ObjResponse::success(
-                $newAssignment->load('employee.currentDetail', 'position', 'department'),
-                'Asignación de director actualizada'
-            );
+            return ObjResponse::success($newAssignment);
+            // return ObjResponse::success(
+            //     $newAssignment->load('employee.currentDetail', 'position', 'department'),
+            //     'Asignación de director actualizada'
+            // );
         } catch (\Exception $ex) {
             DB::rollBack();
             Log::error("EmployeeController ~ changeDirectorAssignment: " . $ex->getMessage());

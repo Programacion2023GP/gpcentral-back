@@ -30,6 +30,7 @@ return new class extends Migration
                 ed.gender,
                 ed.avatar,
                 ed.signature_image,
+                ea.id AS assignment_id,
                 ea.position_uuid,
                 p.name AS position_name,
                 d.uuid AS department_uuid,
@@ -43,7 +44,16 @@ return new class extends Migration
             FROM users u
             LEFT JOIN employees e ON u.employee_id = e.id
             LEFT JOIN employee_details ed ON e.id = ed.employee_id AND ed.end_date IS NULL
-            LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            -- LEFT JOIN employee_assignments ea ON e.id = ea.employee_id AND ea.end_date IS NULL
+            LEFT JOIN (
+				SELECT ea1.*
+				FROM employee_assignments ea1
+				INNER JOIN (
+					SELECT employee_id, MAX(created_at) AS max_created_at
+					FROM employee_assignments
+					GROUP BY employee_id
+				) ea2 ON ea1.employee_id = ea2.employee_id AND ea1.created_at = ea2.max_created_at
+			) ea ON e.id = ea.employee_id
             LEFT JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL
             LEFT JOIN departments d ON ea.department_uuid = d.uuid AND d.end_date IS NULL
             LEFT JOIN organizations o ON d.organization_id = o.id

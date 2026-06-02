@@ -57,7 +57,7 @@ class Department extends Model
 
     public function directors()
     {
-        $directorPositionUuids = Position::where('name', 'LIKE', '%DIRECTOR%')
+        $directorPositionUuids = Position::where('name', 'LIKE', '%DIRECTOR%')->where("name", "not like", "%SUB%DIRECTOR%")
             ->distinct()
             ->pluck('uuid');
 
