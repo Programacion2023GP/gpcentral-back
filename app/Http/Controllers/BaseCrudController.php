@@ -118,7 +118,7 @@ abstract class BaseCrudController extends Controller
          if ($this->useAuthFilter) {
             $auth = Auth::user();
 
-            if (Schema::hasColumn($this->modelClassView->getTable(), 'uuid')) {
+            if (Schema::hasColumn($this->modelClass->getTable(), 'uuid')) {
                // La columna existe en la base de datos
                $query->whereNull('end_date');
             }
