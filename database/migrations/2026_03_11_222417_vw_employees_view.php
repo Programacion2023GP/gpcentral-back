@@ -34,6 +34,8 @@ return new class extends Migration
                 p.name AS position_name,
                 d.uuid AS department_uuid,
                 d.name AS department_name,
+                d.logo AS department_logo,
+                d.seal_image,
                 o.id AS organization_id,
                 o.name AS organization_name,
                 a.id AS administration_id,

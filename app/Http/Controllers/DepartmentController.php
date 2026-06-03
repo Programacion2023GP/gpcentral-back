@@ -21,7 +21,7 @@ class DepartmentController extends BaseCrudController
     protected $modelClassView = VW_Department::class;
     protected $versioned = true;
     protected $imageDirectory = 'departments';
-    protected $imageFields = ['seal_image'];
+    protected $imageFields = ['logo', 'seal_image'];
     protected $defaultOrderBy = ['id' => 'desc'];
     protected $useAuthFilter = true;
     protected $selectLabel = 'CONCAT(COALESCE(code, "")," - ",name)';
@@ -49,7 +49,6 @@ class DepartmentController extends BaseCrudController
      */
     public function show($id, Request $request,  $internal = false)
     {
-        Log::info("Porque entre aqui al show?");
         try {
             $date = $request->get('date', now()->toDateString());
             $department = Department::where('id', $id)

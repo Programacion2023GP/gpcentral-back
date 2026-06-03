@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('organization_id')->constrained();
             $table->string('code', 45)->nullable()->unique();
             $table->string('name', 255);
+            $table->string('logo')->nullable();         // logo
             $table->string('seal_image')->nullable();         // sello
             $table->date('start_date');
             $table->date('end_date')->nullable();

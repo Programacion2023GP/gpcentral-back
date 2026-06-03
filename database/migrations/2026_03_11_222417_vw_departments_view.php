@@ -17,6 +17,7 @@ return new class extends Migration
                 d.organization_id,
                 o.name AS organization_name,
                 o.code AS organization_code,
+                d.logo AS department_logo,
                 d.seal_image,
                 d.start_date,
                 d.end_date,

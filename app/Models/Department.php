@@ -19,6 +19,7 @@ class Department extends Model
         'code',
         'organization_id',
         'name',
+        'logo', 
         'seal_image',
         'start_date',
         'end_date',
