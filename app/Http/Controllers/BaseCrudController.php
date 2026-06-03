@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
@@ -116,6 +117,11 @@ abstract class BaseCrudController extends Controller
          // Filtro por autenticación
          if ($this->useAuthFilter) {
             $auth = Auth::user();
+
+            if (Schema::hasColumn($this->modelClassView->getTable(), 'uuid')) {
+               // La columna existe en la base de datos
+               $query->whereNull('end_date');
+            }
             if ($auth && isset($auth->role_id) && $auth->role_id > 2) {
                $query->where('active', true);
             }
