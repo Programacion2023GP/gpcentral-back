@@ -140,6 +140,7 @@ Route::prefix("employees")->group(function () {
     Route::get("/selectIndex", [EmployeeController::class, 'selectIndex']);
     Route::post("/createOrUpdate", [EmployeeController::class, 'createOrUpdate']);
     Route::get("/id/{id}", [EmployeeController::class, 'show']);
+    Route::post("/getEmployeeBy/{field}", [EmployeeController::class, 'getEmployeeBy']);
     Route::delete("/delete", [EmployeeController::class, 'delete']);
     Route::get("/disEnable/{id}/{active}", [EmployeeController::class, 'disEnable']);
     Route::get("/deleteMultiple", [EmployeeController::class, 'deleteMultiple']);

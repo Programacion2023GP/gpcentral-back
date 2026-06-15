@@ -67,6 +67,34 @@ class EmployeeController extends BaseCrudController
         // return response()->json($response, $response->data["status_code"]);
     }
 
+
+    /**
+     * Mostrar lista de usuarios.
+     *
+     * 
+     */
+    public function getEmployeeBy(string $field, Request $request): JsonResponse
+    {
+        ObjResponse::default();
+        try {
+            $employee = VW_Employee::orderBy('user_id', 'desc')
+                ->where($field, $request->value)
+                ->where("active", true)
+                ->first();
+
+            return ObjResponse::success($employee);
+            // $response->data["message"] = 'Peticion satisfactoria | Lista de usuarios.';
+            // $response->data["result"] = $list;
+
+            // Http::get(route('api.notifications'));
+        } catch (\Exception $ex) {
+            $msg = "UserController ~ index ~ Hubo un error -> " . $ex->getMessage();
+            Log::error($msg);
+            return ObjResponse::error($msg);
+        }
+        // return response()->json($response, $response->data["status_code"]);
+    }
+
     /**
      * Crear empleado con sus detalles y asignación inicial.
      */
