@@ -73,7 +73,7 @@ class EmployeeController extends BaseCrudController
      *
      * 
      */
-    public function getEmployeeBy(string $field, string $value, Request $request): JsonResponse
+    public function getBy(string $field, string $value, Request $request): JsonResponse
     {
         ObjResponse::default();
         try {
