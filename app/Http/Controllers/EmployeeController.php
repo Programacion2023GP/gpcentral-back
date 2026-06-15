@@ -73,12 +73,12 @@ class EmployeeController extends BaseCrudController
      *
      * 
      */
-    public function getEmployeeBy(string $field, Request $request): JsonResponse
+    public function getEmployeeBy(string $field, string $value, Request $request): JsonResponse
     {
         ObjResponse::default();
         try {
             $employee = VW_Employee::orderBy('user_id', 'desc')
-                ->where($field, $request->value)
+                ->where($field, $value)
                 ->where("active", true)
                 ->first();
 
