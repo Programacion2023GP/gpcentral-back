@@ -20,7 +20,7 @@ class EmployeeDetail extends Model
         'rfc',
         'curp',
         'gender',
-        'phone',
+        'cellphone',
         'signature_image',
         'start_date',
         'end_date',

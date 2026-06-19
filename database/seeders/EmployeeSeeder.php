@@ -102,7 +102,7 @@ class EmployeeSeeder extends Seeder
             'rfc' => $rfc,
             'curp' => $curp,
             'gender' => $gender,
-            'phone' => null,
+            'cellphone' => null,
             'avatar' => null,
             'signature_image' => null,
             'start_date' => $hireDate,

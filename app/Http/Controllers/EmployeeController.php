@@ -166,7 +166,7 @@ class EmployeeController extends BaseCrudController
             'rfc',
             'curp',
             'gender',
-            'phone',
+            'cellphone',
             'avatar',
             'signature_image'
         ]);
@@ -267,7 +267,7 @@ class EmployeeController extends BaseCrudController
                     'rfc' => $detail->rfc,
                     'curp' => $detail->curp,
                     'gender' => $detail->gender,
-                    'phone' => $detail->phone,
+                    'cellphone' => $detail->cellphone,
                     'avatar' => $detail->avatar,
                     'signature' => $detail->signature_image,
                 ] : null,

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('curp', 20)->nullable();
             $table->enum('gender', ['M','F'])->nullable();
            
-            $table->string('phone', 50)->nullable();
+            $table->string('cellphone', 50)->nullable();
             $table->string('signature_image')->nullable();
             $table->date('start_date');
             $table->date('end_date')->nullable();

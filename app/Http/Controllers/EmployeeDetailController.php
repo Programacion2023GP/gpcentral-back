@@ -21,7 +21,7 @@ class EmployeeDetailController extends BaseCrudController
             'rfc' => 'nullable|string|max:20',
             'curp' => 'nullable|string|max:20',
             'gender' => 'nullable|in:M,F',
-            'phone' => 'nullable|string|max:50',
+            'cellphone' => 'nullable|string|max:50',
             'start_date' => 'required|date',
         ];
     }

@@ -18,6 +18,8 @@ return new class extends Migration
             // $table->foreignId('department_id')->constrained();
             // $table->uuid('department_uuid')->nullable()->index(); // UUID del departamento lógico
             $table->string('name', 255);
+            $table->string('office_phone', 50)->nullable();
+            $table->string('ext', 20)->nullable();
             $table->uuid('parent_position_uuid')->nullable()->index(); // puesto superior (jefe)
             $table->date('start_date');
             $table->date('end_date')->nullable();

@@ -17,6 +17,8 @@ class Position extends Model
         'organization_id',
         // 'department_uuid',
         'name',
+        'office_phone',
+        'ext',
         'parent_position_uuid',
         'start_date',
         'end_date',
