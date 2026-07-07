@@ -12,7 +12,6 @@ use App\Models\VW_User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
 class DepartmentController extends BaseCrudController
@@ -29,7 +28,7 @@ class DepartmentController extends BaseCrudController
     public function __construct()
     {
         $this->validationRules = [
-            'code'   => 'string|max:255',
+            'code'   => 'nullable|string|max:255|unique:departments,code,NULL,id|where:active,1|where:end_date,NULL',
             'name' => 'string|max:255',
         ];
 

@@ -6,11 +6,13 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CodigoPostalController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\EmployeeDetailController;
 use App\Http\Controllers\EstadosController;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserSystemAccessController;
+use App\Models\EmployeeDetail;
 use App\Models\ObjResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function (Request $request) {
-    return "API LARAVEL v1.0.0.0";
+    return "API LARAVEL v1.0.0.1";
 });
 
 // Route::post('/login', [AuthController::class, 'login']);
@@ -146,6 +148,11 @@ Route::prefix("employees")->group(function () {
     Route::get("/deleteMultiple", [EmployeeController::class, 'deleteMultiple']);
     Route::get("directors", [EmployeeController::class, 'directors']);
     Route::post("/change-director-assignment", [EmployeeController::class, 'changeDirectorAssignment']);
+});
+
+Route::prefix("employee-details")->group(function () {
+    Route::post("/update-images", [EmployeeController::class, 'updateImages']);
+    Route::get("/selectIndex", [EmployeeDetailController::class, 'selectIndex']);
 });
 
 Route::prefix("users")->group(function () {
