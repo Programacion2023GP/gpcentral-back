@@ -118,7 +118,7 @@ abstract class BaseCrudController extends Controller
          if ($this->useAuthFilter) {
             $auth = Auth::user();
 
-             if (Schema::hasColumn((new $this->modelClass)->getTable(), 'uuid')) {
+            if (Schema::hasColumn((new $this->modelClass)->getTable(), 'uuid')) {
                // La columna existe en la base de datos
                $query->whereNull('end_date');
             }
@@ -217,7 +217,7 @@ abstract class BaseCrudController extends Controller
                $request,
                $field,
                $this->imageDirectory,
-               $versioned ? $model->uuid : $model->id,
+               $this->versioned ? $model->uuid : $model->id,
                strtoupper($field),
                is_null($id),
                "noImage.png",
@@ -269,7 +269,7 @@ abstract class BaseCrudController extends Controller
             $request,
             $field,
             $this->imageDirectory,
-            $versioned ? $new->uuid : $new->id,
+            $this->versioned ? $new->uuid : $new->id,
             strtoupper($field),
             is_null($id),
             "noImage.png",
@@ -362,116 +362,116 @@ abstract class BaseCrudController extends Controller
       }
    }
 
-    /**
-     * Valida la petición usando el validador de Laravel.
-     * Maneja automáticamente la regla 'unique' para ignorar el ID actual
-     * y preserva las cláusulas `where:` anexadas con pipe.
-     */
-    protected function validateRequest(Request $request, $id = null)
-    {
-       $rules = $this->validationRules;
-       $table = (new $this->modelClass)->getTable();
+   /**
+    * Valida la petición usando el validador de Laravel.
+    * Maneja automáticamente la regla 'unique' para ignorar el ID actual
+    * y preserva las cláusulas `where:` anexadas con pipe.
+    */
+   protected function validateRequest(Request $request, $id = null)
+   {
+      $rules = $this->validationRules;
+      $table = (new $this->modelClass)->getTable();
 
-       foreach ($rules as $field => $rule) {
-          if (is_string($rule) && str_contains($rule, 'unique:')) {
-             $parts = explode('|', $rule);
-             $otherParts = [];
-             $uniqueConfig = null;
-             $whereClauses = [];
+      foreach ($rules as $field => $rule) {
+         if (is_string($rule) && str_contains($rule, 'unique:')) {
+            $parts = explode('|', $rule);
+            $otherParts = [];
+            $uniqueConfig = null;
+            $whereClauses = [];
 
-             foreach ($parts as $part) {
-                if (str_starts_with($part, 'unique:')) {
-                   $uniqueConfig = $part;
-                } elseif (str_starts_with($part, 'where:')) {
-                   $whereClauses[] = substr($part, 6);
-                } else {
-                   $otherParts[] = $part;
-                }
-             }
+            foreach ($parts as $part) {
+               if (str_starts_with($part, 'unique:')) {
+                  $uniqueConfig = $part;
+               } elseif (str_starts_with($part, 'where:')) {
+                  $whereClauses[] = substr($part, 6);
+               } else {
+                  $otherParts[] = $part;
+               }
+            }
 
-             if ($uniqueConfig) {
-                $uniqueParams = explode(',', substr($uniqueConfig, 7));
-                $uniqueTable = $uniqueParams[0] ?? $table;
-                $uniqueColumn = $uniqueParams[1] ?? $field;
-                $idColumn = $uniqueParams[3] ?? 'id';
+            if ($uniqueConfig) {
+               $uniqueParams = explode(',', substr($uniqueConfig, 7));
+               $uniqueTable = $uniqueParams[0] ?? $table;
+               $uniqueColumn = $uniqueParams[1] ?? $field;
+               $idColumn = $uniqueParams[3] ?? 'id';
 
-                $uniqueObj = Rule::unique($uniqueTable, $uniqueColumn)->ignore($id, $idColumn);
+               $uniqueObj = Rule::unique($uniqueTable, $uniqueColumn)->ignore($id, $idColumn);
 
-                foreach ($whereClauses as $clause) {
-                   $clauseParts = explode(',', $clause, 2);
-                   $col = $clauseParts[0];
-                   $val = $clauseParts[1] ?? null;
+               foreach ($whereClauses as $clause) {
+                  $clauseParts = explode(',', $clause, 2);
+                  $col = $clauseParts[0];
+                  $val = $clauseParts[1] ?? null;
 
-                   if (strtoupper($val ?? '') === 'NULL') {
-                      $uniqueObj->whereNull($col);
-                   } else {
-                      $uniqueObj->where($col, $val);
-                   }
-                }
+                  if (strtoupper($val ?? '') === 'NULL') {
+                     $uniqueObj->whereNull($col);
+                  } else {
+                     $uniqueObj->where($col, $val);
+                  }
+               }
 
-                $rules[$field] = array_merge($otherParts, [$uniqueObj]);
-             }
-          } elseif (is_array($rule)) {
-             $newSubRules = [];
-             $pendingWhere = [];
-             $uniqueIndex = null;
+               $rules[$field] = array_merge($otherParts, [$uniqueObj]);
+            }
+         } elseif (is_array($rule)) {
+            $newSubRules = [];
+            $pendingWhere = [];
+            $uniqueIndex = null;
 
-             foreach ($rule as $key => $subRule) {
-                if (is_string($subRule) && str_contains($subRule, 'unique:')) {
-                   $uniqueIndex = $key;
-                   $newSubRules[$key] = $subRule;
-                } elseif (is_string($subRule) && str_starts_with($subRule, 'where:')) {
-                   $pendingWhere[$key] = $subRule;
-                } else {
-                   $newSubRules[$key] = $subRule;
-                }
-             }
+            foreach ($rule as $key => $subRule) {
+               if (is_string($subRule) && str_contains($subRule, 'unique:')) {
+                  $uniqueIndex = $key;
+                  $newSubRules[$key] = $subRule;
+               } elseif (is_string($subRule) && str_starts_with($subRule, 'where:')) {
+                  $pendingWhere[$key] = $subRule;
+               } else {
+                  $newSubRules[$key] = $subRule;
+               }
+            }
 
-             if ($uniqueIndex !== null) {
-                $parts = explode('|', $newSubRules[$uniqueIndex]);
-                $uniqueConfig = null;
-                $inlineWheres = [];
+            if ($uniqueIndex !== null) {
+               $parts = explode('|', $newSubRules[$uniqueIndex]);
+               $uniqueConfig = null;
+               $inlineWheres = [];
 
-                foreach ($parts as $part) {
-                   if (str_starts_with($part, 'unique:')) {
-                      $uniqueConfig = $part;
-                   } elseif (str_starts_with($part, 'where:')) {
-                      $inlineWheres[] = substr($part, 6);
-                   }
-                }
+               foreach ($parts as $part) {
+                  if (str_starts_with($part, 'unique:')) {
+                     $uniqueConfig = $part;
+                  } elseif (str_starts_with($part, 'where:')) {
+                     $inlineWheres[] = substr($part, 6);
+                  }
+               }
 
-                $allWheres = array_merge($inlineWheres, array_map(fn($w) => substr($w, 6), $pendingWhere));
+               $allWheres = array_merge($inlineWheres, array_map(fn($w) => substr($w, 6), $pendingWhere));
 
-                if ($uniqueConfig) {
-                   $uniqueParams = explode(',', substr($uniqueConfig, 7));
-                   $uniqueTable = $uniqueParams[0] ?? $table;
-                   $uniqueColumn = $uniqueParams[1] ?? $field;
-                   $idColumn = $uniqueParams[3] ?? 'id';
+               if ($uniqueConfig) {
+                  $uniqueParams = explode(',', substr($uniqueConfig, 7));
+                  $uniqueTable = $uniqueParams[0] ?? $table;
+                  $uniqueColumn = $uniqueParams[1] ?? $field;
+                  $idColumn = $uniqueParams[3] ?? 'id';
 
-                   $uniqueObj = Rule::unique($uniqueTable, $uniqueColumn)->ignore($id, $idColumn);
+                  $uniqueObj = Rule::unique($uniqueTable, $uniqueColumn)->ignore($id, $idColumn);
 
-                   foreach ($allWheres as $clause) {
-                      $clauseParts = explode(',', $clause, 2);
-                      $col = $clauseParts[0];
-                      $val = $clauseParts[1] ?? null;
+                  foreach ($allWheres as $clause) {
+                     $clauseParts = explode(',', $clause, 2);
+                     $col = $clauseParts[0];
+                     $val = $clauseParts[1] ?? null;
 
-                      if (strtoupper($val ?? '') === 'NULL') {
-                         $uniqueObj->whereNull($col);
-                      } else {
-                         $uniqueObj->where($col, $val);
-                      }
-                   }
+                     if (strtoupper($val ?? '') === 'NULL') {
+                        $uniqueObj->whereNull($col);
+                     } else {
+                        $uniqueObj->where($col, $val);
+                     }
+                  }
 
-                   $newSubRules[$uniqueIndex] = $uniqueObj;
-                }
+                  $newSubRules[$uniqueIndex] = $uniqueObj;
+               }
 
-                $rules[$field] = array_values($newSubRules);
-             } else {
-                $rules[$field] = $rule;
-             }
-          }
-       }
+               $rules[$field] = array_values($newSubRules);
+            } else {
+               $rules[$field] = $rule;
+            }
+         }
+      }
 
-       return Validator::make($request->all(), $rules, $this->validationMessages);
-    }
+      return Validator::make($request->all(), $rules, $this->validationMessages);
+   }
 }
