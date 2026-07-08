@@ -323,18 +323,18 @@ class EmployeeController extends BaseCrudController
             $startDate = $request->get('start_date', now()->toDateString());
 
             if (!$assignmentId || !$newEmployeeId || !$newPositionUuid) {
-                Log::info($request);
-                Log::info($assignmentId);
-                Log::info($newEmployeeId);
-                Log::info($newPositionUuid);
+                // Log::info($request);
+                // Log::info($assignmentId);
+                // Log::info($newEmployeeId);
+                // Log::info($newPositionUuid);
                 return ObjResponse::error('Asignación invalida, Empleado ivalido y Puesto invalido, son requeridos');
             }
 
             $currentAssignment = EmployeeAssignment::where('id', $assignmentId)
                 ->whereNull('end_date')
                 ->first();
-            Log::info($request);
-            Log::info($currentAssignment);
+            // Log::info($request);
+            // Log::info($currentAssignment);
 
 
             if (!$currentAssignment) {

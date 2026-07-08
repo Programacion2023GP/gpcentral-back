@@ -73,7 +73,7 @@ class Controller extends BaseController
     public function ImgUpload($image, $destination, $dir, $imgName)
     {
         try {
-            Log::info($image);
+            // Log::info($image);
             $permissions = 0777;
             // Eliminar versiones anteriores con extensiones comunes
             foreach (['PNG', 'JPG', 'JPEG', 'png', 'jpg', 'jpeg', 'avif', 'webp'] as $ext) {
@@ -111,6 +111,7 @@ class Controller extends BaseController
                     $model
                 );
             } elseif (gettype($value) != "string") {
+                Log::info("entreeeee");
                 $model->$field = null;
                 $model->save();
             }
