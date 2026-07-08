@@ -110,7 +110,7 @@ class Controller extends BaseController
                     "noImage.png",
                     $model
                 );
-            } elseif (!$request->filled($field)) {
+            } elseif (gettype($value) != "string") {
                 $model->$field = null;
                 $model->save();
             }
