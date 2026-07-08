@@ -111,7 +111,7 @@ class Controller extends BaseController
                     $model
                 );
             } elseif (!$request->filled($field)) {
-                $model->$field = '';
+                $model->$field = null;
                 $model->save();
             }
         }
