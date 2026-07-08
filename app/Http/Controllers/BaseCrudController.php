@@ -212,18 +212,7 @@ abstract class BaseCrudController extends Controller
          $model->fill($fillData);
          $model->save();
 
-         foreach ($this->imageFields as $field) {
-            $this->ImageUp(
-               $request,
-               $field,
-               $this->imageDirectory,
-               $this->versioned ? $model->uuid : $model->id,
-               strtoupper($field),
-               is_null($id),
-               "noImage.png",
-               $model
-            );
-         }
+         $this->processImageFields($request, $model, $this->versioned ? $model->uuid : $model->id, is_null($id));
 
          $message = $id ? 'Registro actualizado' : 'Registro creado';
          return ObjResponse::success($model, $message);
@@ -264,18 +253,7 @@ abstract class BaseCrudController extends Controller
          $new = $this->modelClass::create($data);
       }
 
-      foreach ($this->imageFields as $field) {
-         $this->ImageUp(
-            $request,
-            $field,
-            $this->imageDirectory,
-            $this->versioned ? $new->uuid : $new->id,
-            strtoupper($field),
-            is_null($id),
-            "noImage.png",
-            $new
-         );
-      }
+      $this->processImageFields($request, $new, $this->versioned ? $new->uuid : $new->id, is_null($id));
 
       $message = $id ? 'Registro actualizado' : 'Registro creado';
       return ObjResponse::success($new, $message);

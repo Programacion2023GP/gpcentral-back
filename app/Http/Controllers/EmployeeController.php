@@ -129,19 +129,7 @@ class EmployeeController extends BaseCrudController
                 $this->saveEmployeeAssignment($employee, $request, $id ? false : true);
             }
 
-            // Procesar imágenes
-            foreach ($this->imageFields as $field) {
-                $this->ImageUp(
-                    $request,
-                    $field,
-                    $this->imageDirectory,
-                    $employee->id,
-                    strtoupper($field),
-                    is_null($id),
-                    "noImage.png",
-                    $employeeDetail
-                );
-            }
+            $this->processImageFields($request, $employeeDetail, $employee->id, is_null($id));
 
             DB::commit();
 

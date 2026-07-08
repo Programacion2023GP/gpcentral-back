@@ -15,6 +15,9 @@ class Controller extends BaseController
 {
     // use AuthorizesRequests, ValidatesRequests;
 
+    protected $imageFields = [];
+    protected $imageDirectory = 'uploads';
+
     /**
      * Subir imagen y asignar al modelo.
      *
@@ -90,6 +93,29 @@ class Controller extends BaseController
         }
     }
 
+    protected function processImageFields(Request $request, $model, $idForPath, $isNew)
+    {
+        foreach ($this->imageFields as $field) {
+            $value = $request->input($field);
+            Log::info("Field '$field': type=" . gettype($value) . ", hasFile=" . ($request->hasFile($field) ? 'true' : 'false') . ", filled=" . ($request->filled($field) ? 'true' : 'false'));
+
+            if ($request->hasFile($field)) {
+                $this->ImageUp(
+                    $request,
+                    $field,
+                    $this->imageDirectory,
+                    $idForPath,
+                    strtoupper($field),
+                    $isNew,
+                    "noImage.png",
+                    $model
+                );
+            } elseif (!$request->filled($field)) {
+                $model->$field = '';
+                $model->save();
+            }
+        }
+    }
 
 
     /**
