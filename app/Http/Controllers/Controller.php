@@ -115,8 +115,9 @@ class Controller extends BaseController
                 );
             } elseif (gettype($value) == "string") {
                 Log::info("entreeeee type=string: $value");
-                $model->$field = $value;
-                $model->save();
+                Log::info("campo: $model->$field");
+                // $model->$field = $value;
+                // $model->save();
             } elseif (!$request->filled($field)) {
                 Log::info("entreeeee al filled:null");
                 $model->$field = null;
