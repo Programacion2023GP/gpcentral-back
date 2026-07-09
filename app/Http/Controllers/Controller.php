@@ -97,7 +97,7 @@ class Controller extends BaseController
     {
         foreach ($this->imageFields as $field) {
             $value = $request->input($field);
-            Log::info("Field '$field': value=" . $value . " | type=" . gettype($value) .
+            Log::info("Field '$field': type=" . gettype($value) .
                 ", hasFile=" . ($request->hasFile($field) ? 'true' : 'false') .
                 ", typeString=" . gettype($value) == "string" ? 'true' : 'false' .
                 ", filled=" . ($request->filled($field) ? 'true' : 'false'));
@@ -114,7 +114,7 @@ class Controller extends BaseController
                     $model
                 );
             } elseif (gettype($value) == "string") {
-                Log::info("entreeeee type=string");
+                Log::info("entreeeee type=string: $value");
                 $model->$field = $value;
                 $model->save();
             } elseif (!$request->filled($field)) {
