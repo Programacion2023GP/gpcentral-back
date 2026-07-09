@@ -97,10 +97,7 @@ class Controller extends BaseController
     {
         foreach ($this->imageFields as $field) {
             $value = $request->input($field);
-            Log::info("Field '$field': type=" . gettype($value) .
-                ", hasFile=" . ($request->hasFile($field) ? 'true' : 'false') .
-                ", typeString=" . gettype($value) == "string" ? 'true' : 'false' .
-                ", filled=" . ($request->filled($field) ? 'true' : 'false'));
+            Log::info("Field '$field': type=" . gettype($value) . ", hasFile=" . ($request->hasFile($field) ? 'true' : 'false') . ", typeString=" . gettype($value) == "string" ? 'true' : 'false' . ", filled=" . ($request->filled($field) ? 'true' : 'false'));
 
             if ($request->hasFile($field)) {
                 $this->ImageUp(
@@ -115,7 +112,7 @@ class Controller extends BaseController
                 );
             } elseif (gettype($value) == "string") {
                 Log::info("entreeeee type=string: $value");
-                Log::info("campo: $model->$field");
+                Log::info("campo: $model[$field]");
                 // $model->$field = $value;
                 // $model->save();
             } elseif (!$request->filled($field)) {
