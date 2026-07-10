@@ -42,11 +42,11 @@ class Controller extends BaseController
                 $timestamp = now()->format('Ymd'); //now()->format('Ymd_Hisu');
                 // $extension = $img_file->getClientOriginalExtension();
                 $img_name = $this->ImgUpload($img_file, $destination, $dir_path, is_null($id) ? $fileName : "$id-$fileName-$timestamp");
-                $model->$requestFileName = $img_name;
+                $model->$requestFileName = asset("assets/$img_name");
                 $model->save();
             } else {
                 if ($create) {
-                    $model->$requestFileName = "$dirPath/$fakeName";
+                    $model->$requestFileName = asset("assets/$dirPath/$fakeName");
                     $model->save();
                 }
             }
