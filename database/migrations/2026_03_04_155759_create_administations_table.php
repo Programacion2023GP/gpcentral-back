@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('administrations', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->index();                    // identificador lógico del departamento
             $table->string('name');
             $table->string('president_name');
             $table->string('political_party')->nullable();
@@ -27,6 +28,8 @@ return new class extends Migration
             $table->boolean('active')->default(true);
             $table->timestamps();
             $table->dateTime('deleted_at')->nullable();
+
+            $table->index(['uuid', 'start_date']);
         });
     }
 
