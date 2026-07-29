@@ -97,7 +97,6 @@ class Controller extends BaseController
     {
         foreach ($this->imageFields as $field) {
             $value = $request->input($field);
-            // Log::info("Field '$field': type=" . gettype($value) . ", hasFile=" . ($request->hasFile($field) ? 'true' : 'false') . ", typeString=" . gettype($value) == "string" ? 'true' : 'false' . ", filled=" . ($request->filled($field) ? 'true' : 'false'));
 
             if ($request->hasFile($field)) {
                 $this->ImageUp(
@@ -110,10 +109,18 @@ class Controller extends BaseController
                     "noImage.png",
                     $model
                 );
-            } elseif (gettype($value) == "string") {
+            } elseif (is_string($value) && $value !== '') {
+                $trimmed = trim($value);
+                if (str_starts_with($trimmed, '{')) {
+                    $decoded = json_decode($trimmed, true);
+                    if (is_array($decoded) && isset($decoded['name'])) {
+                        $value = $decoded['name'];
+                    }
+                }
+
                 $model->$field = $value;
                 $model->save();
-            } elseif (!$request->filled($field)) {
+            } else {
                 $model->$field = null;
                 $model->save();
             }
