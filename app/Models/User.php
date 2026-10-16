@@ -21,6 +21,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'employee_id',
+        'role_id',
         'username',
         'email',
         'password',
@@ -53,6 +54,30 @@ class User extends Authenticatable
     public function employee()
     {
         return $this->belongsTo(Employee::class);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function permissions()
+    {
+        return $this->role?->permissions ?? collect();
+    }
+
+    public function hasPermission(string $permission): bool
+    {
+        if (!$this->active || !$this->role || !$this->role->active) return false;
+        if ($this->role->slug === 'superadmin') return true;
+        return $this->role->permissions()->where('code', $permission)->exists();
+    }
+
+    public function roleInSystem(string $systemCode): ?string
+    {
+        return $this->systemAccesses()
+            ->whereHas('system', fn($query) => $query->where('code', $systemCode))
+            ->value('role');
     }
 
     // public function role()

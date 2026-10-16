@@ -11,10 +11,11 @@ class Employee extends Model
 {
     use HasFactory, Notifiable, Auditable;
 
-    protected $fillable = ['employee_code', 'hire_date', 'active'];
+    protected $fillable = ['employee_code', 'hire_date', 'employment_type', 'termination_date', 'external_source', 'external_id', 'active'];
 
     protected $casts = [
         'hire_date' => 'date',
+        'termination_date' => 'date',
         'active' => 'boolean',
     ];
 

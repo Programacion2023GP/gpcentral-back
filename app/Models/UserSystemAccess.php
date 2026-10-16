@@ -16,7 +16,7 @@ class UserSystemAccess extends Model
     protected $fillable = [
         'user_id',
         'system_id',
-        // 'role',
+        'role',
         'start_date',
         'end_date',
         'active'

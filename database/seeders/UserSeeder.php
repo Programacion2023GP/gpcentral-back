@@ -60,28 +60,30 @@ class UserSeeder extends Seeder
 
    public function run()
    {
-      $employees = DB::table('employees')->get();
+      $defaultRoleId = DB::table('roles')->where('slug', 'administrador-rh')->value('id');
+      $employees = DB::table('employees as e')
+         ->join('employee_details as d', function ($join) {
+            $join->on('d.employee_id', '=', 'e.id')->whereNull('d.end_date');
+         })
+         ->select('e.id', 'e.employee_code', 'd.name', 'd.plast_name', 'd.mlast_name')
+         ->get();
 
-      $usedUsernames = [];
+      // Índice en memoria: evita una consulta SQL por cada intento de username.
+      $usedUsernames = DB::table('users')->pluck('username')
+         ->filter()
+         ->mapWithKeys(fn($username) => [strtolower($username) => true])
+         ->all();
       $insertData = [];
       $now = now();
+      // Las cuentas importadas nacen sin contraseña conocida. Deben activarse
+      // mediante recuperación o asignación explícita por un administrador.
+      $inactivePasswordHash = Hash::make(Str::random(64));
 
       foreach ($employees as $employee) {
-         // Obtener datos personales más recientes (end_date null)
-         $detail = DB::table('employee_details')
-            ->where('employee_id', $employee->id)
-            ->whereNull('end_date')
-            ->first();
-
-         if (!$detail) {
-            Log::warning("Empleado {$employee->employee_code} sin datos personales, se omite.");
-            continue;
-         }
-
          $usernameBase = $this->generateUsername(
-            $detail->name,
-            $detail->plast_name,
-            $detail->mlast_name
+            $employee->name,
+            $employee->plast_name,
+            $employee->mlast_name
          );
 
          // Verificar unicidad
@@ -89,23 +91,23 @@ class UserSeeder extends Seeder
          $counter = 1;
          $finalUsername = $usernameBase;
          while (
-            in_array($finalUsername, $usedUsernames) ||
-            DB::table('users')->where('username', $finalUsername)->exists()
+            isset($usedUsernames[strtolower($finalUsername)])
          ) {
             $suffix = (string) $counter;
             $finalUsername = substr($usernameBase, 0, 15 - strlen($suffix)) . $suffix;
             $counter++;
          }
-         $usedUsernames[] = $finalUsername;
+         $usedUsernames[strtolower($finalUsername)] = true;
 
          // Email basado en username (puedes cambiarlo)
          $email = strtolower($finalUsername) . '@gomezpalacio.gob.mx';
 
          $insertData[] = [
             'employee_id' => $employee->id,
+            'role_id' => $defaultRoleId,
             'username' => $finalUsername,
             'email' => $email,
-            'password' => Hash::make($finalUsername . "*"), // Cambiar después
+            'password' => $inactivePasswordHash,
             'active' => true,
             'created_at' => $now,
             'updated_at' => $now,

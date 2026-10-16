@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Log;
 
 class ActivityLogController extends Controller
 {
-   public function index(Request $request, Response $response)
+   public function index(Request $request)
    {
-      $response->data = ObjResponse::default()->getData(true); // convertir a array
       try {
 
          $query = ActivityLog::with(['user', 'model'])
@@ -23,7 +22,7 @@ class ActivityLogController extends Controller
 
          // Filtros
          if ($request->has('model') && $request->model) {
-            $query->where('model', $request->model);
+            $query->where('model_type', $request->model);
          }
 
          if ($request->has('action') && $request->action) {
@@ -42,17 +41,18 @@ class ActivityLogController extends Controller
             $query->whereDate('created_at', '<=', $request->date_to);
          }
 
-         $activityLogs = $query->paginate(50);
-         $users = User::all();
-         $actions = ActivityLog::distinct()->pluck('action');
-
-         // return view('activity-logs.index', compact('activityLogs', 'users', 'actions'));
+         $perPage = min(max((int) $request->input('per_page', 50), 10), 200);
+         return ObjResponse::success([
+            'logs' => $query->paginate($perPage),
+            'users' => User::select('id', 'username', 'email')->orderBy('username')->get(),
+            'actions' => ActivityLog::distinct()->orderBy('action')->pluck('action'),
+            'models' => ActivityLog::distinct()->orderBy('model_type')->pluck('model_type'),
+         ]);
       } catch (\Exception $ex) {
          $msg = "ActivityLogController ~ index ~ Hubo un error -> " . $ex->getMessage();
          Log::error($msg);
-         $response->data = ObjResponse::error($msg);
+         return ObjResponse::serverError('Error al consultar la bitácora', $ex);
       }
-      return response()->json($response, $response->data["status_code"]);
    }
 
    /**
@@ -79,7 +79,7 @@ class ActivityLogController extends Controller
             ->get()
       ];
 
-      return view('dashboard', compact('stats'));
+      return ObjResponse::success($stats);
    }
 
    /**

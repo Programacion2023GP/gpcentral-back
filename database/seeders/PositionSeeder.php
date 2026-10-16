@@ -164,7 +164,6 @@ class PositionSeeder extends Seeder
             $positionName = $position['name'];
             $insertData[] = [
                 'uuid' => (string) Str::uuid(),
-                'department_uuid' => $positionDeptMap[$positionName] ?? null,
                 'name' => $positionName,
                 'parent_position_uuid' => null,
                 'start_date' => $now,

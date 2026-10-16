@@ -1,0 +1,973 @@
+[2026-09-29 15:08:50] local.ERROR: PHP Parse error: Syntax error, unexpected T_NS_SEPARATOR on line 1 {"exception":"[object] (Psy\\Exception\\ParseErrorException(code: 0): PHP Parse error: Syntax error, unexpected T_NS_SEPARATOR on line 1 at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Exception/ParseErrorException.php:44)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/CodeCleaner.php(488): Psy/Exception/ParseErrorException::fromParseError(Object(PhpParser/Error))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/CodeCleaner.php(269): Psy/CodeCleaner->parse('<?php echo json...', false)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1059): Psy/CodeCleaner->clean(Array, false)
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1092): Psy/Shell->addCode('echo json_encod...', true)
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1640): Psy/Shell->setCode('echo json_encod...', true)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/tinker/src/Console/TinkerCommand.php(77): Psy/Shell->execute('echo json_encod...')
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Laravel/Tinker/Console/TinkerCommand->handle()
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Laravel/Tinker/Console/TinkerCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#19 {main}
+"} 
+[2026-09-29 15:09:11] local.ERROR: PHP Parse error: Syntax error, unexpected '=' on line 1 {"exception":"[object] (Psy\\Exception\\ParseErrorException(code: 0): PHP Parse error: Syntax error, unexpected '=' on line 1 at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Exception/ParseErrorException.php:44)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/CodeCleaner.php(488): Psy/Exception/ParseErrorException::fromParseError(Object(PhpParser/Error))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/CodeCleaner.php(269): Psy/CodeCleaner->parse('<?php =Illumina...', false)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1059): Psy/CodeCleaner->clean(Array, false)
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1092): Psy/Shell->addCode('=Illuminate//Sup...', true)
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/psy/psysh/src/Shell.php(1640): Psy/Shell->setCode('=Illuminate//Sup...', true)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/tinker/src/Console/TinkerCommand.php(77): Psy/Shell->execute('=Illuminate//Sup...')
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Laravel/Tinker/Console/TinkerCommand->handle()
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Laravel/Tinker/Console/TinkerCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#19 {main}
+"} 
+[2026-09-30 08:55:04] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'vw_departments' already exists (Connection: mysql, SQL: 
+            CREATE VIEW vw_departments AS
+            SELECT
+                d.id,
+                d.uuid,
+                d.code,
+                d.name,
+                d.organization_id,
+                o.name AS organization_name,
+                o.code AS organization_code,
+                d.logo AS department_logo,
+                d.seal_image,
+                d.start_date,
+                d.end_date,
+                d.active,
+                dir.assignment_id AS assignment_id,
+                dir.employee_id AS director_employee_id,
+                dir.employee_code AS director_employee_code,
+                dir.employee_avatar AS director_avatar,
+                dir.employee_signature_image AS director_signature_image,
+                dir.director_name,
+                dir.position_uuid AS position_uuid,
+                dir.position_name AS position_name,
+                dir.assignment_start AS assignment_start,
+                dir.assignment_end AS assignment_end,
+                dir.assignment_active AS assignment_active
+            FROM departments d
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN (
+                SELECT
+                    ANY_VALUE(ea.id) AS assignment_id,
+                    ea.department_uuid,
+                    ANY_VALUE(ea.employee_id) AS employee_id,
+                    ANY_VALUE(e.employee_code) AS employee_code,
+                    ANY_VALUE(ed.avatar) AS employee_avatar,
+                    ANY_VALUE(ed.signature_image) AS employee_signature_image,
+                    ANY_VALUE(CONCAT(ed.name, ' ', IFNULL(ed.plast_name, ''), ' ', IFNULL(ed.mlast_name, ''))) AS director_name,
+                    ANY_VALUE(p.uuid) AS position_uuid,
+                    ANY_VALUE(p.name) AS position_name,
+                    ANY_VALUE(ea.start_date) AS assignment_start,
+                    ANY_VALUE(ea.end_date) AS assignment_end,
+                    ANY_VALUE(ea.active) AS assignment_active
+                FROM employee_assignments ea
+                INNER JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL AND p.name LIKE '%DIRECTOR%' AND p.name NOT LIKE '%SUB%DIRECTOR%'
+                LEFT JOIN employee_details ed ON ea.employee_id = ed.employee_id AND ed.end_date IS NULL
+                INNER JOIN employees e ON ed.employee_id = e.id
+                WHERE ea.end_date IS NULL
+                GROUP BY ea.department_uuid
+            ) dir ON d.uuid = dir.department_uuid
+        ) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'vw_departments' already exists (Connection: mysql, SQL: 
+            CREATE VIEW vw_departments AS
+            SELECT
+                d.id,
+                d.uuid,
+                d.code,
+                d.name,
+                d.organization_id,
+                o.name AS organization_name,
+                o.code AS organization_code,
+                d.logo AS department_logo,
+                d.seal_image,
+                d.start_date,
+                d.end_date,
+                d.active,
+                dir.assignment_id AS assignment_id,
+                dir.employee_id AS director_employee_id,
+                dir.employee_code AS director_employee_code,
+                dir.employee_avatar AS director_avatar,
+                dir.employee_signature_image AS director_signature_image,
+                dir.director_name,
+                dir.position_uuid AS position_uuid,
+                dir.position_name AS position_name,
+                dir.assignment_start AS assignment_start,
+                dir.assignment_end AS assignment_end,
+                dir.assignment_active AS assignment_active
+            FROM departments d
+            LEFT JOIN organizations o ON d.organization_id = o.id
+            LEFT JOIN (
+                SELECT
+                    ANY_VALUE(ea.id) AS assignment_id,
+                    ea.department_uuid,
+                    ANY_VALUE(ea.employee_id) AS employee_id,
+                    ANY_VALUE(e.employee_code) AS employee_code,
+                    ANY_VALUE(ed.avatar) AS employee_avatar,
+                    ANY_VALUE(ed.signature_image) AS employee_signature_image,
+                    ANY_VALUE(CONCAT(ed.name, ' ', IFNULL(ed.plast_name, ''), ' ', IFNULL(ed.mlast_name, ''))) AS director_name,
+                    ANY_VALUE(p.uuid) AS position_uuid,
+                    ANY_VALUE(p.name) AS position_name,
+                    ANY_VALUE(ea.start_date) AS assignment_start,
+                    ANY_VALUE(ea.end_date) AS assignment_end,
+                    ANY_VALUE(ea.active) AS assignment_active
+                FROM employee_assignments ea
+                INNER JOIN positions p ON ea.position_uuid = p.uuid AND p.end_date IS NULL AND p.name LIKE '%DIRECTOR%' AND p.name NOT LIKE '%SUB%DIRECTOR%'
+                LEFT JOIN employee_details ed ON ea.employee_id = ed.employee_id AND ed.end_date IS NULL
+                INNER JOIN employees e ON ed.employee_id = e.id
+                WHERE ea.end_date IS NULL
+                GROUP BY ea.department_uuid
+            ) dir ON d.uuid = dir.department_uuid
+        ) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_departments_view.php(10): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(53): Illuminate/Console/Command->call('migrate', Array)
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/FreshCommand->handle()
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/FreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 {main}
+
+[previous exception] [object] (PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'vw_departments' already exists at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:587)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(587): PDOStatement->execute()
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::statement():576}('/n            CR...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('/n            CR...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(576): Illuminate/Database/Connection->run('/n            CR...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(509): Illuminate/Database/Connection->statement('/n            CR...')
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(355): Illuminate/Database/DatabaseManager->__call('statement', Array)
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/database/migrations/2026_03_11_222417_vw_departments_view.php(10): Illuminate/Support/Facades/Facade::__callStatic('statement', Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(501): Illuminate/Database/Migrations/Migration@anonymous->up()
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(418): Illuminate/Database/Migrations/Migrator->runMethod(Object(Illuminate/Database/MySqlConnection), Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(427): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runMigration():414}()
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->runMigration(Object(Illuminate/Database/Migrations/Migration@anonymous), 'up')
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(37): Illuminate/Database/Migrations/Migrator->{closure:Illuminate/Database/Migrations/Migrator::runUp():224}()
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(783): Illuminate/Console/View/Components/Task->render('2026_03_11_2224...', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(224): Illuminate/Database/Migrations/Migrator->write('Illuminate//Cons...', '2026_03_11_2224...', Object(Closure))
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(189): Illuminate/Database/Migrations/Migrator->runUp('C://Users//Usuari...', 1, false)
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(132): Illuminate/Database/Migrations/Migrator->runPending(Array, Array)
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(90): Illuminate/Database/Migrations/Migrator->run(Array, Array)
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(641): Illuminate/Database/Console/Migrations/MigrateCommand->{closure:Illuminate/Database/Console/Migrations/MigrateCommand::handle():83}()
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(83): Illuminate/Database/Migrations/Migrator->usingConnection(NULL, Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/MigrateCommand->handle()
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArrayInput), Object(Illuminate/Console/OutputStyle))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(28): Illuminate/Console/Command->runCommand('migrate', Array, Object(Illuminate/Console/OutputStyle))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/FreshCommand.php(53): Illuminate/Console/Command->call('migrate', Array)
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Database/Console/Migrations/FreshCommand->handle()
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Command/Command.php(326): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(1106): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(324): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Database/Console/Migrations/FreshCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/artisan(35): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#43 {main}
+"} 
+[2026-09-30 08:56:00] local.INFO: Puestos insertados: 105  
+[2026-09-30 08:56:07] local.WARNING: Puesto no encontrado: AUXILIAR ADMINISTRATIVO para empleado 611491  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100445  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107694  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109957  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109975  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110019  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110031  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209988  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 200211  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 200930  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 202723  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 202992  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 204547  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 207156  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 207483  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 209620  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210028  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210106  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 103810  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 200031  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 204384  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 206860  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 109913  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 109931  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200175  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200212  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 200910  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 201183  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 202515  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 202524  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 202725  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 203208  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 204111  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 205737  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 206505  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 207407  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 207598  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 207767  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208091  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 208398  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208602  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 208728  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 208751  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209580  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209603  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209992  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 209999  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210007  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210023  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N MAQUINISTA CAMION BOMBEROS para empleado 210024  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210038  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210041  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210066  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210154  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210156  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210164  
+[2026-09-30 08:56:08] local.WARNING: Puesto no encontrado: N BOMBERO para empleado 210173  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109952  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109592  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210121  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 108374  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109966  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110039  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 207773  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106621  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109978  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109989  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110000  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202103  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210145  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104213  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109921  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109970  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210013  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210136  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: N COORDINADORA para empleado 109388  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110003  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106335  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109936  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109919  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109933  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109942  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109968  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210068  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210080  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109935  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109941  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109986  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109990  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 103858  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110049  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109930  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109937  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109987  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109991  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 100078  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100668  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 101205  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 101210  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 102718  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104202  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105424  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA TECNICO DE ILUMINACION A para empleado 106214  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 108457  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 108744  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 108947  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109902  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109924  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109928  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 109944  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109946  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109953  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 109977  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 109979  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109985  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109988  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: N COORDINADORA para empleado 110004  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 110014  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 110026  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 200720  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 201211  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 203703  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA BIBLIOTECARIO A para empleado 205388  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 206098  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207797  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209569  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 209619  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209765  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 210040  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210043  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 210048  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210062  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210075  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210107  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210108  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB BIBLIOTECARIO B para empleado 210140  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210157  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102880  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109984  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 205318  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210144  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 107609  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109793  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109981  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110027  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202019  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 102262  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 105227  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108870  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109916  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109993  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 109997  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110037  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110044  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 201209  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 205502  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 205707  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205988  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206495  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 206706  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207222  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207423  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207468  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207667  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209342  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209584  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 209618  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 209998  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210009  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210015  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210051  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 210052  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210074  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210088  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210094  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210120  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210128  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210132  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210153  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210171  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106924  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109901  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102772  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110038  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 205803  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 208313  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209996  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210067  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210096  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100325  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102056  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202751  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202800  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202930  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 208571  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209602  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209985  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210046  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210103  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210133  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210134  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210174  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109974  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109982  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107649  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109969  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110009  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110010  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110018  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110020  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110023  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209760  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210089  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210168  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210047  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210177  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 105308  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 107692  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 109994  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200598  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200632  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200971  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 201214  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202538  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202612  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202636  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202815  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202867  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203149  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203676  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 203696  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203701  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204332  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205552  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 205582  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206330  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206633  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206795  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206941  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206967  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207006  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207056  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207260  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207416  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207419  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207424  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207433  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207531  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207614  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207691  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207771  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207776  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 208391  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 209046  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210001  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210003  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210037  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 210039  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210063  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210064  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210071  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210073  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210076  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210077  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210097  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210109  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210123  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210129  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210138  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210141  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210146  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210152  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210166  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 104394  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109954  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102694  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110015  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110030  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 101178  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 208952  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210045  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 108368  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107288  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109965  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 207976  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109794  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 200686  
+[2026-09-30 08:56:09] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 206754  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102516  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 105790  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA ENFERMERA A para empleado 107285  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109593  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 109795  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 109950  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109995  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109996  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB ENFERMERA B para empleado 110011  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 202437  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 209982  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210122  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108838  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109912  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109920  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109938  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109940  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 207911  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210118  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210137  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 100128  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 100768  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105710  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108167  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 108378  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109637  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109904  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109958  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109961  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109967  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110008  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110028  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 110035  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 206807  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 208823  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210175  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210183  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 107298  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 109998  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110033  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 200007  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 200106  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 202870  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202886  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 202894  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 203041  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 206490  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 206497  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA ELECTRICISTA A para empleado 206759  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 207029  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 207530  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 208878  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210081  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210082  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210111  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 210126  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB ELECTRICISTA B para empleado 210170  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 210176  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 102190  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 102729  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 102841  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 106067  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 106385  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 106855  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA DELEGADO SINDICAL A para empleado 107709  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 108426  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 108599  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 109566  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109927  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109949  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 109955  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 200125  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 202297  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 202968  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203202  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203702  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 203837  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205298  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205697  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 205727  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB DELEGADO SINDICAL B para empleado 206300  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 206301  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 206940  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207012  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207053  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207409  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 207741  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208822  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208858  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 208865  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209338  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209500  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 209649  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 210027  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC DELEGADO SINDICAL C para empleado 210147  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209991  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: N SUPERVISOR para empleado 105887  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204380  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA JARDINERO A para empleado 209568  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 210148  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 104172  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB JARDINERO B para empleado 109754  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC JARDINERO C para empleado 204288  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NB TECNICO DE ILUMINACION B para empleado 206943  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 102713  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 105224  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 106574  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107005  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 107286  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: N PROGRAMADOR para empleado 107513  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 108331  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109804  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109915  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109918  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109934  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109939  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109945  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109948  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109973  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110001  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110024  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110029  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110046  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 208039  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 209997  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NA INTENDENTE A para empleado 210101  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 109983  
+[2026-09-30 08:56:10] local.WARNING: Puesto no encontrado: NC ADMINISTRATIVO C para empleado 110007  
+[2026-09-30 08:56:10] local.INFO: Empleados importados correctamente.  
+[2026-09-30 09:06:01] local.INFO: Usuarios creados: 1977  
+[2026-09-30 09:24:02] local.ERROR: App\Http\Controllers\UserController ~ index ~ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc)  
+[2026-09-30 09:24:02] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(414): Illuminate/Database/Connection->run('select * from `...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2913): Illuminate/Database/Connection->select('select * from `...', Array, true)
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2902): Illuminate/Database/Query/Builder->runSelect()
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3456): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():2901}()
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2901): Illuminate/Database/Query/Builder->onceWithColumns(Array, Object(Closure))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(739): Illuminate/Database/Query/Builder->get(Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(723): Illuminate/Database/Eloquent/Builder->getModels(Array)
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/BaseCrudController.php(150): Illuminate/Database/Eloquent/Builder->get()
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/BaseCrudController->index(Object(Illuminate/Http/Request))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/UserController), 'index')
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'users.view')
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#45 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#48 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#49 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#50 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#51 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:423)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(423): PDO->prepare('select * from `...')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::select():414}('select * from `...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(414): Illuminate/Database/Connection->run('select * from `...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2913): Illuminate/Database/Connection->select('select * from `...', Array, true)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2902): Illuminate/Database/Query/Builder->runSelect()
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3456): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():2901}()
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2901): Illuminate/Database/Query/Builder->onceWithColumns(Array, Object(Closure))
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(739): Illuminate/Database/Query/Builder->get(Array)
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(723): Illuminate/Database/Eloquent/Builder->getModels(Array)
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/BaseCrudController.php(150): Illuminate/Database/Eloquent/Builder->get()
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/BaseCrudController->index(Object(Illuminate/Http/Request))
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/UserController), 'index')
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'users.view')
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#45 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#49 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#50 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#51 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#52 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#53 {main}
+"} 
+[2026-09-30 09:38:23] local.ERROR: Cannot use object of type Illuminate\Http\JsonResponse as array {"userId":1978,"exception":"[object] (Error(code: 0): Cannot use object of type Illuminate\\Http\\JsonResponse as array at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/CodigoPostalController.php:29)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CodigoPostalController->index(Object(Illuminate/Http/Response), '27000')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CodigoPostalController), 'index')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'postal-codes.vi...')
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#42 {main}
+"} 
+[2026-09-30 09:38:26] local.ERROR: Cannot use object of type Illuminate\Http\JsonResponse as array {"userId":1978,"exception":"[object] (Error(code: 0): Cannot use object of type Illuminate\\Http\\JsonResponse as array at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/CodigoPostalController.php:29)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/CodigoPostalController->index(Object(Illuminate/Http/Response), '35000')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/CodigoPostalController), 'index')
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'postal-codes.vi...')
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#42 {main}
+"} 
+[2026-09-30 14:45:30] local.ERROR: App\Http\Controllers\UserController ~ index ~ SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc)  
+[2026-09-30 14:45:30] local.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' (Connection: mysql, SQL: select * from `vw_users` where `role_id` >= 1 order by `id` desc) at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:829)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(414): Illuminate/Database/Connection->run('select * from `...', Array, Object(Closure))
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2913): Illuminate/Database/Connection->select('select * from `...', Array, true)
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2902): Illuminate/Database/Query/Builder->runSelect()
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3456): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():2901}()
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2901): Illuminate/Database/Query/Builder->onceWithColumns(Array, Object(Closure))
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(739): Illuminate/Database/Query/Builder->get(Array)
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(723): Illuminate/Database/Eloquent/Builder->getModels(Array)
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/BaseCrudController.php(150): Illuminate/Database/Eloquent/Builder->get()
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/BaseCrudController->index(Object(Illuminate/Http/Request))
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/UserController), 'index')
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'users.view')
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#45 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#48 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#49 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#50 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#51 {main}
+
+[previous exception] [object] (PDOException(code: 42S22): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'role_id' in 'where clause' at C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php:423)
+[stacktrace]
+#0 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(423): PDO->prepare('select * from `...')
+#1 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(816): Illuminate/Database/Connection->{closure:Illuminate/Database/Connection::select():414}('select * from `...', Array)
+#2 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(783): Illuminate/Database/Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#3 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Connection.php(414): Illuminate/Database/Connection->run('select * from `...', Array, Object(Closure))
+#4 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2913): Illuminate/Database/Connection->select('select * from `...', Array, true)
+#5 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2902): Illuminate/Database/Query/Builder->runSelect()
+#6 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3456): Illuminate/Database/Query/Builder->{closure:Illuminate/Database/Query/Builder::get():2901}()
+#7 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2901): Illuminate/Database/Query/Builder->onceWithColumns(Array, Object(Closure))
+#8 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(739): Illuminate/Database/Query/Builder->get(Array)
+#9 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(723): Illuminate/Database/Eloquent/Builder->getModels(Array)
+#10 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Controllers/BaseCrudController.php(150): Illuminate/Database/Eloquent/Builder->get()
+#11 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): App/Http/Controllers/BaseCrudController->index(Object(Illuminate/Http/Request))
+#12 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(43): Illuminate/Routing/Controller->callAction('index', Array)
+#13 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(259): Illuminate/Routing/ControllerDispatcher->dispatch(Object(Illuminate/Routing/Route), Object(App/Http/Controllers/UserController), 'index')
+#14 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Route.php(205): Illuminate/Routing/Route->runController()
+#15 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(806): Illuminate/Routing/Route->run()
+#16 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Routing/Router->{closure:Illuminate/Routing/Router::runRouteWithinStack():805}(Object(Illuminate/Http/Request))
+#17 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/app/Http/Middleware/RequirePermission.php(17): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#18 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): App/Http/Middleware/RequirePermission->handle(Object(Illuminate/Http/Request), Object(Closure), 'users.view')
+#19 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(50): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#20 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/SubstituteBindings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#21 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(159): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#22 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(125): Illuminate/Routing/Middleware/ThrottleRequests->handleRequest(Object(Illuminate/Http/Request), Object(Closure), Array)
+#23 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Middleware/ThrottleRequests.php(87): Illuminate/Routing/Middleware/ThrottleRequests->handleRequestUsingNamedLimiter(Object(Illuminate/Http/Request), Object(Closure), 'api', Object(Closure))
+#24 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Routing/Middleware/ThrottleRequests->handle(Object(Illuminate/Http/Request), Object(Closure), 'api')
+#25 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(57): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#26 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Auth/Middleware/Authenticate->handle(Object(Illuminate/Http/Request), Object(Closure), 'sanctum')
+#27 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#28 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(805): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#29 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(784): Illuminate/Routing/Router->runRouteWithinStack(Object(Illuminate/Routing/Route), Object(Illuminate/Http/Request))
+#30 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(748): Illuminate/Routing/Router->runRoute(Object(Illuminate/Http/Request), Object(Illuminate/Routing/Route))
+#31 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Routing/Router.php(737): Illuminate/Routing/Router->dispatchToRoute(Object(Illuminate/Http/Request))
+#32 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(200): Illuminate/Routing/Router->dispatch(Object(Illuminate/Http/Request))
+#33 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(144): Illuminate/Foundation/Http/Kernel->{closure:Illuminate/Foundation/Http/Kernel::dispatchToRouter():197}(Object(Illuminate/Http/Request))
+#34 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:Illuminate/Pipeline/Pipeline::prepareDestination():142}(Object(Illuminate/Http/Request))
+#35 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#36 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull->handle(Object(Illuminate/Http/Request), Object(Closure))
+#37 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#38 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(40): Illuminate/Foundation/Http/Middleware/TransformsRequest->handle(Object(Illuminate/Http/Request), Object(Closure))
+#39 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/TrimStrings->handle(Object(Illuminate/Http/Request), Object(Closure))
+#40 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#41 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/ValidatePostSize->handle(Object(Illuminate/Http/Request), Object(Closure))
+#42 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(99): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#43 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance->handle(Object(Illuminate/Http/Request), Object(Closure))
+#44 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#45 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/HandleCors->handle(Object(Illuminate/Http/Request), Object(Closure))
+#46 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(39): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#47 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(183): Illuminate/Http/Middleware/TrustProxies->handle(Object(Illuminate/Http/Request), Object(Closure))
+#48 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(119): Illuminate/Pipeline/Pipeline->{closure:{closure:Illuminate/Pipeline/Pipeline::carry():158}:159}(Object(Illuminate/Http/Request))
+#49 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(175): Illuminate/Pipeline/Pipeline->then(Object(Closure))
+#50 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate/Foundation/Http/Kernel->sendRequestThroughRouter(Object(Illuminate/Http/Request))
+#51 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/public/index.php(51): Illuminate/Foundation/Http/Kernel->handle(Object(Illuminate/Http/Request))
+#52 C:/Users/Usuario/Desktop/DESARROLLOS-NESTOR/GPCENTRAL/gpcentral-back/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(16): require_once('C://Users//Usuari...')
+#53 {main}
+"} 

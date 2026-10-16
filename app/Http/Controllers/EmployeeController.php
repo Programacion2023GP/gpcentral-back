@@ -26,6 +26,7 @@ class EmployeeController extends BaseCrudController
     protected $validationRules = [
         'employee_code' => 'required|string|max:50|unique:employees,employee_code',
         'hire_date' => 'required|date',
+        'employment_type' => 'required|in:confianza,sindicalizado',
     ];
     protected $selectId = "user_id";
     protected $selectLabel = 'CONCAT(employee_code, " - ", full_name)'; // Si usas vista
@@ -116,9 +117,9 @@ class EmployeeController extends BaseCrudController
                 if (!$employee) {
                     return ObjResponse::notFound('Empleado no encontrado');
                 }
-                $employee->update($request->only(['employee_code', 'hire_date']));
+                $employee->update($request->only(['employee_code', 'hire_date', 'employment_type']));
             } else {
-                $employee = Employee::create($request->only(['employee_code', 'hire_date']));
+                $employee = Employee::create($request->only(['employee_code', 'hire_date', 'employment_type']));
             }
 
             // Manejar detalles del empleado (versionado)
@@ -147,6 +148,7 @@ class EmployeeController extends BaseCrudController
      */
     private function saveEmployeeDetail($employee, Request $request, $isNew)
     {
+        $effectiveDate = $request->get('effective_date', $request->get('start_date', now()->toDateString()));
         $detailData = $request->only([
             'name',
             'plast_name',
@@ -162,14 +164,14 @@ class EmployeeController extends BaseCrudController
         // Si es actualización y existen datos, cerrar versión actual
         if (!$isNew && $employee->currentDetail) {
             $employee->currentDetail->update([
-                'end_date' => now()->toDateString(),
+                'end_date' => $effectiveDate,
                 'active' => false
             ]);
         }
 
         // Crear nuevo detalle
         $detailData['employee_id'] = $employee->id;
-        $detailData['start_date'] = $request->get('detail_start_date', now()->toDateString());
+        $detailData['start_date'] = $request->get('detail_start_date', $effectiveDate);
         $detailData['end_date'] = null;
         $detailData['active'] = true;
         $employeeDetail = EmployeeDetail::create($detailData);
@@ -181,9 +183,10 @@ class EmployeeController extends BaseCrudController
      */
     private function saveEmployeeAssignment($employee, Request $request, $isNew)
     {
+        $effectiveDate = $request->get('effective_date', $request->get('start_date', now()->toDateString()));
         if (!$isNew && $employee->currentAssignment) {
             $employee->currentAssignment->update([
-                'end_date' => now()->toDateString(),
+                'end_date' => $effectiveDate,
                 'active' => false
             ]);
         }
@@ -192,10 +195,41 @@ class EmployeeController extends BaseCrudController
             'employee_id' => $employee->id,
             'department_uuid' => $request->department_uuid,
             'position_uuid' => $request->position_uuid,
-            'start_date' => $request->get('assignment_start_date', now()->toDateString()),
+            'start_date' => $request->get('assignment_start_date', $effectiveDate),
             'end_date' => null,
             'active' => true
         ]);
+    }
+
+    public function delete(Request $request)
+    {
+        return $this->terminateEmployee((int) $request->id, $request->get('effective_date'));
+    }
+
+    public function disEnable(Response $response, $id, $action)
+    {
+        if ($action === 'reactivar') {
+            return parent::disEnable($response, $id, $action);
+        }
+        return $this->terminateEmployee((int) $id, request('effective_date'));
+    }
+
+    private function terminateEmployee(int $id, ?string $effectiveDate = null)
+    {
+        $employee = Employee::find($id);
+        if (!$employee) return ObjResponse::notFound('Empleado no encontrado');
+        $date = $effectiveDate ?: now()->toDateString();
+        DB::transaction(function () use ($employee, $date) {
+            $employee->update(['active' => false, 'termination_date' => $date]);
+            $employee->details()->where('active', true)->update(['active' => false, 'end_date' => $date]);
+            $employee->assignments()->where('active', true)->update(['active' => false, 'end_date' => $date]);
+            if ($employee->user) {
+                $employee->user->update(['active' => false]);
+                $employee->user->tokens()->delete();
+                $employee->user->systemAccesses()->where('active', true)->update(['active' => false, 'end_date' => $date]);
+            }
+        });
+        return ObjResponse::success(null, 'Baja registrada; historial, relaciones y acceso fueron cerrados');
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ObjResponse;
 use App\Models\UserSystemAccess;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserSystemAccessController extends BaseCrudController
 {

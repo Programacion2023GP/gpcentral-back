@@ -2,6 +2,11 @@
 
 return [
 
+    'employee_sync' => [
+        'file' => env('EMPLOYEE_SYNC_FILE'),
+        'time' => env('EMPLOYEE_SYNC_TIME', '02:00'),
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Third Party Services

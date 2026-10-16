@@ -12,7 +12,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        if (config('services.employee_sync.file')) {
+            // Se prepara la conciliación; un usuario autorizado confirma los cambios.
+            $schedule->command('employees:sync-preview')->dailyAt(config('services.employee_sync.time', '02:00'))->withoutOverlapping();
+        }
     }
 
     /**

@@ -8,6 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
+        DB::statement("DROP VIEW IF EXISTS vw_users");
         DB::statement("
             CREATE VIEW vw_users AS
             SELECT
@@ -26,7 +27,7 @@ return new class extends Migration
                 CONCAT(IFNULL(ed.plast_name,''), ' ', IFNULL(ed.mlast_name,''), ' ', ed.name) as full_name_reverse,
                 ed.rfc,
                 ed.curp,
-                ed.phone,
+                ed.cellphone,
                 ed.gender,
                 ed.avatar,
                 ed.signature_image,

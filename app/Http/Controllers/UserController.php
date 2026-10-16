@@ -58,9 +58,29 @@ class UserController extends BaseCrudController
 
     public function __construct()
     {
-        // $this->indexQueryCallback = function ($query, Request $request) {
-        //     $query->with(['currentDetail', 'currentAssignment.position.department.organization']);
-        // };
+        $this->validationRules = [
+            'username' => 'required|string|max:100|unique:users,username',
+            'email' => 'required|email|max:255|unique:users,email',
+            'employee_id' => 'nullable|exists:employees,id|unique:users,employee_id',
+            'role_id' => 'required|exists:roles,id',
+            'active' => 'boolean',
+        ];
+    }
+
+    public function createOrUpdate(Request $request)
+    {
+        $id = $request->id;
+        $validator = $this->validateRequest($request, $id);
+        if ($validator->fails()) return ObjResponse::validationError($validator->errors()->toArray());
+        $request->validate(['password' => [$id ? 'nullable' : 'required', 'string', 'min:8']]);
+
+        $user = $id ? User::findOrFail($id) : new User();
+        $user->fill($request->only(['employee_id', 'role_id', 'username', 'email', 'active']));
+        if ($request->filled('password')) $user->password = $request->password;
+        $user->save();
+        if (!$user->active) $user->tokens()->delete();
+
+        return ObjResponse::success($user->load('role', 'employee'), $id ? 'Usuario actualizado' : 'Usuario creado');
     }
 
     /**

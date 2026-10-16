@@ -17,6 +17,6 @@ class System extends Model
 
     public function accesses()
     {
-        return $this->hasMany(EmployeeSystemAccess::class);
+        return $this->hasMany(UserSystemAccess::class);
     }
 }
