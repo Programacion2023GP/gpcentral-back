@@ -18,7 +18,7 @@ class SuperAdminSeeder extends Seeder
 
         $username = env('SUPERADMIN_USERNAME', 'sa');
         $email = env('SUPERADMIN_EMAIL', 'sa@gomezpalacio.gob.mx');
-        $password = env('SUPERADMIN_PASSWORD',"desarrollo");
+        $password = env('SUPERADMIN_PASSWORD', 'desarrollo') ?? 'desarrollo';
         if (!$password || strlen($password) < 12) {
             throw new RuntimeException('SUPERADMIN_PASSWORD debe tener al menos 12 caracteres.');
         }
