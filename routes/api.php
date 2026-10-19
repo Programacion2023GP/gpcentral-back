@@ -14,6 +14,7 @@ use App\Http\Controllers\PositionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserSystemAccessController;
+use App\Http\Controllers\Api\V1\EmployeeLookupController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn() => ['name' => 'GP Central API', 'version' => '1.1.0.0']);
@@ -22,6 +23,12 @@ Route::middleware('throttle:10,1')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
     Route::post('/forgot-password', [AuthController::class, 'forgotPassword']);
     Route::post('/reset-password', [AuthController::class, 'resetPassword']);
+});
+
+Route::middleware(['throttle:integrations', 'api.client:employees:read'])->group(function () {
+    Route::get('/v1/employees/by-code/{employeeCode}', [EmployeeLookupController::class, 'showByCode']);
+    // Compatibilidad temporal con GPcenter. No volver a aceptar un nombre de columna arbitrario.
+    Route::get('/employees/getBy/employee_code/{employeeCode}', [EmployeeLookupController::class, 'showByCode']);
 });
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -62,7 +69,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/departments/directors', [DepartmentController::class, 'directors'])->middleware('permission:departments.view');
     Route::get('/employees/directors', [EmployeeController::class, 'directors'])->middleware('permission:employees.view');
     Route::post('/employees/change-director-assignment', [EmployeeController::class, 'changeDirectorAssignment'])->middleware('permission:employees.update');
-    Route::get('/employees/getBy/{field}/{value}', [EmployeeController::class, 'getBy'])->middleware('permission:employees.view');
     Route::get('/employee-details/selectIndex', [EmployeeDetailController::class, 'selectIndex'])->middleware('permission:employees.view');
     Route::post('/employee-sync/preview', [EmployeeSyncController::class, 'preview'])->middleware('permission:sync.create');
     Route::get('/employee-sync/{run}', [EmployeeSyncController::class, 'show'])->middleware('permission:sync.view');
